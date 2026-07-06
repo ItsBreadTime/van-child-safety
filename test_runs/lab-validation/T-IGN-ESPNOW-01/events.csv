@@ -1,0 +1,4 @@
+timestamp,topic,payload
+2026-07-04T00:00:54+0700,bus/event,"{""event"":""ignition_off"",""state"":""exit_grace"",""timestamp"":""2026-07-03T17:00:54Z""}"
+2026-07-04T00:01:46+0700,bus/distress/state,
+2026-07-04T00:01:46+0700,bus/event,"{""event"":""ignition_on"",""state"":""active"",""timestamp"":""2026-07-03T17:01:46Z""}"

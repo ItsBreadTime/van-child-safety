@@ -1,0 +1,114 @@
+## 2026-07-04T00:40:47.356+07:00 adb logcat -c
+## ended_at=2026-07-04T00:40:47.498+07:00 exit_code=0 duration_ms=<id>.3
+
+## 2026-07-04T00:40:47.498+07:00 adb shell am force-stop com.example.redacted
+## ended_at=2026-07-04T00:40:47.568+07:00 exit_code=0 duration_ms=<id>.6
+
+## 2026-07-04T00:40:47.568+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:40:47.670+07:00 exit_code=0 duration_ms=<id>.0
+
+## 2026-07-04T00:40:48.677+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:40:48.798+07:00 exit_code=0 duration_ms=<id>.4
+
+## 2026-07-04T00:40:53.367+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:40:53.512+07:00 exit_code=0 duration_ms=<id>.1
+
+## 2026-07-04T00:41:09.650+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:41:09.765+07:00 exit_code=0 duration_ms=<id>.7
+
+## 2026-07-04T00:41:14.154+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:41:14.275+07:00 exit_code=0 duration_ms=<id>.8
+
+## 2026-07-04T00:41:29.721+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:41:29.917+07:00 exit_code=0 duration_ms=<id>.8
+
+## 2026-07-04T00:41:34.020+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:41:34.176+07:00 exit_code=0 duration_ms=<id>.3
+
+## 2026-07-04T00:41:50.097+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:41:50.259+07:00 exit_code=0 duration_ms=<id>.6
+
+## 2026-07-04T00:41:54.740+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:41:54.873+07:00 exit_code=0 duration_ms=<id>.3
+
+## 2026-07-04T00:42:10.166+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:42:10.316+07:00 exit_code=0 duration_ms=<id>.6
+
+## 2026-07-04T00:42:14.877+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:42:15.038+07:00 exit_code=0 duration_ms=<id>.2
+
+## 2026-07-04T00:42:30.540+07:00 adb shell am start -W -n io.example.busbeacontest -a io.example.busbeacontest
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+## ended_at=2026-07-04T00:42:30.705+07:00 exit_code=0 duration_ms=<id>.0
+

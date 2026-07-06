@@ -1,0 +1,2 @@
+2026-07-04T19:19:07.328+07:00 publish bus/event {"event":"sensor_fault","sensor":"ld2412","detail":"simulated_sensor_fault_advisory","duration_s":123,"source":"chapter4_automated_test","timestamp":"2026-07-04T12:19:07Z"}
+2026-07-04T19:20:08.233+07:00 publish bus/event {"event":"sensor_fault","sensor":"ld2412","detail":"chapter4_rerun_sensor_fault_advisory","duration_s":124,"source":"chapter4_automated_test_rerun","timestamp":"2026-07-04T12:20:08Z"}

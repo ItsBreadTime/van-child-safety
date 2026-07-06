@@ -1,0 +1,3 @@
+# CI variant: default ESP-NOW ignition heartbeat receiver.
+CONFIG_IGNITION_SOURCE_ESPNOW=y
+# CONFIG_IGNITION_SOURCE_GPIO is not set

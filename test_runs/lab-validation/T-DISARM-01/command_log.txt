@@ -1,0 +1,10 @@
+# T-DISARM-01 commands_started_at=2026-07-04T19:10:42+07:00
+2026-07-04T19:10:42+07:00 publish bus/command distress_clear
+2026-07-04T19:10:44+07:00 publish bus/command bus_empty_off
+2026-07-04T19:10:44+07:00 publish bus/command bus_empty_on
+2026-07-04T19:10:44+07:00 publish bus/command distress_test
+2026-07-04T19:12:44+07:00 publish bus/command distress_ack
+2026-07-04T19:12:44+07:00 publish bus/command {"request_id":"ch4-disarm-01-1783167042","action":"disarm","confirm_cabin_clear":true,"source":"chapter4_automated_test"}
+2026-07-04T19:12:44+07:00 publish bus/command bus_empty_off
+2026-07-04T19:12:44+07:00 publish bus/command distress_clear
+# T-DISARM-01 commands_stopped_at=2026-07-04T19:12:44+07:00

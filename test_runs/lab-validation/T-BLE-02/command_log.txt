@@ -1,0 +1,2 @@
+{"ts": "2026-07-04T12:45:13.527+07:00", "kind": "publish", "topic": "bus/command", "payload": "bus_empty_on", "returncode": 0, "start_iso": "2026-07-04T12:45:13.507+07:00", "end_iso": "2026-07-04T12:45:13.527+07:00"}
+{"ts": "2026-07-04T12:45:33.682+07:00", "kind": "publish", "topic": "bus/command", "payload": "bus_empty_off", "returncode": 0, "start_iso": "2026-07-04T12:45:33.656+07:00", "end_iso": "2026-07-04T12:45:33.682+07:00"}

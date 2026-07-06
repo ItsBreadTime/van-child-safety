@@ -1,0 +1,4 @@
+timestamp,topic,payload
+2026-07-03T23:40:47+0700,bus/ha/location/event,"{""event"":""zone_enter"",""zone_entity"":""zone.example_home"",""zone_name"":""School"",""source"":""chapter4_simulated_test"",""timestamp"":""2026-07-03T16:40:30Z""}"
+2026-07-03T23:40:55+0700,bus/ha/location/event,"{""event"":""zone_leave"",""zone_entity"":""zone.example_home"",""zone_name"":""School"",""source"":""chapter4_simulated_test"",""timestamp"":""2026-07-03T16:40:40Z""}"
+2026-07-03T23:41:05+0700,bus/ha/location/event,"{""event"":""zone_enter"",""zone_entity"":""zone.example_home"",""zone_name"":""School"",""source"":""chapter4_simulated_test"",""timestamp"":""2026-07-03T16:40:50Z""}"

@@ -1,0 +1,5 @@
+paho-mqtt==2.1.0
+requests==2.32.3
+discord.py==2.7.1
+
+# Test deps (not in the runtime image): pip install -r requirements-test.txt

@@ -1,0 +1,680 @@
+# Van Child Safety Home Assistant package.
+# Install by copying this file into your HA packages directory and enabling packages.
+# See docs/HOME_ASSISTANT.md for a setup walkthrough.
+#
+# Bus location for dashboard/zone logic is the Home Assistant person entity:
+# `person.bus_tracker`. Firmware GPS still publishes telemetry and MQTT location
+# topics, but Home Assistant bus-location decisions use the person entity.
+
+mqtt:
+  sensor:
+    - name: Bus Relay Status
+      unique_id: bus_relay_discord_status
+      state_topic: bus/relay/discord/status
+      value_template: "{{ value_json.status }}"
+      json_attributes_topic: bus/relay/discord/status
+      # The relay publishes a JSON object (not the bare word 'online') to this
+      # topic, so payload_available cannot match. Parse via a template instead.
+      availability_template: "{{ value_json.status in ['online', 'degraded', 'offline'] }}"
+    - name: Bus Relay Last Event
+      unique_id: bus_relay_discord_last_event
+      state_topic: bus/relay/discord/last_event
+      value_template: "{{ value_json.content }}"
+      json_attributes_topic: bus/relay/discord/last_event
+    - name: Bus Relay Error
+      unique_id: bus_relay_discord_error
+      state_topic: bus/relay/discord/error
+      value_template: "{{ value_json.message if value_json.message is defined else 'clear' }}"
+      json_attributes_topic: bus/relay/discord/error
+    - name: Bus Roster
+      unique_id: bus_roster
+      state_topic: bus/beacon/config/state
+      value_template: "{{ value_json.count }}"
+      json_attributes_topic: bus/beacon/config/state
+    - name: Bus Command Result
+      unique_id: bus_command_result
+      state_topic: bus/command/result
+      value_template: "{{ value_json.request_id }}"
+      json_attributes_topic: bus/command/result
+
+    # Mirrors the firmware-published bus/distress/state JSON as HA attributes.
+    # The firmware discovery (sensor.bus_001_distress) only exposes `state`,
+    # so anything richer (trigger, evidence, person, gps) requires this
+    # second sensor with json_attributes_topic. Keep state aligned with the
+    # device entity for conditional-card matching.
+    - name: Bus Distress Detail
+      unique_id: bus_distress_detail
+      state_topic: bus/distress/state
+      value_template: >-
+        {{ value_json.state
+           if value_json is defined and value_json.state is defined
+           else 'clear' }}
+      json_attributes_topic: bus/distress/state
+
+    # Same idea for bus/state: the device entity (sensor.bus_001_bus_state)
+    # only exposes `state`, but the firmware JSON also publishes
+    # exit_grace_remaining_s, ignition_on, armed, *_status, etc.
+    - name: Bus State Detail
+      unique_id: bus_state_detail
+      state_topic: bus/state
+      value_template: "{{ value_json.state }}"
+      json_attributes_topic: bus/state
+
+input_text:
+  bus_device_id:
+    name: Bus Device ID
+    initial: bus_001
+    max: 31
+  bus_beacon_id:
+    name: Bus Beacon ID (type for new, or pick below)
+    max: 31
+  bus_person_name:
+    name: Bus Person Name
+    max: 48
+  bus_ibeacon_uuid:
+    name: Bus iBeacon UUID
+    max: 36
+  bus_discord_channel_id:
+    name: Bus Discord Channel ID
+    max: 32
+  bus_home_zone_entity:
+    name: Bus Home Zone Entity
+    max: 64
+  bus_person_notes:
+    name: Bus Person Notes
+    max: 160
+
+input_select:
+  bus_beacon_selector:
+    name: Select existing beacon
+    options:
+      - "(new — type ID below)"
+    icon: mdi:format-list-bulleted
+
+input_number:
+  bus_ibeacon_major:
+    name: Bus iBeacon Major
+    min: 0
+    max: 65535
+    step: 1
+    mode: box
+  bus_ibeacon_minor:
+    name: Bus iBeacon Minor
+    min: 0
+    max: 65535
+    step: 1
+    mode: box
+  bus_beacon_rssi:
+    name: Bus Beacon RSSI Threshold
+    min: -127
+    max: 0
+    step: 1
+    mode: box
+
+input_boolean:
+  bus_person_active:
+    name: Bus Person Active
+    initial: true
+  bus_exit_grace_reminder_sent:
+    name: Bus Exit Grace Reminder Sent
+    initial: false
+  bus_cabin_clear_confirmed:
+    name: Bus Cabin Physically Checked Clear
+    icon: mdi:bus-alert
+    initial: false
+
+template:
+  - sensor:
+      - name: Bus Device Tracker Entity
+        unique_id: bus_device_tracker_entity
+        state: person.bus_tracker
+      - name: Bus State
+        unique_id: bus_state
+        state: "{{ states('sensor.' ~ states('input_text.bus_device_id') ~ '_bus_state') }}"
+      - name: Active Distress
+        unique_id: bus_distress
+        state: "{{ states('sensor.' ~ states('input_text.bus_device_id') ~ '_distress') | default('clear') }}"
+
+script:
+  bus_add_person_beacon:
+    alias: Bus Add Person Beacon
+    mode: single
+    sequence:
+      - choose:
+          - conditions:
+              - condition: template
+                value_template: >-
+                  {{ states('input_text.bus_beacon_id') | regex_match('^[A-Za-z0-9_-]{1,31}$') }}
+              - condition: template
+                value_template: >-
+                  {{ states('input_text.bus_ibeacon_uuid')
+                     | regex_match('^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$') }}
+            sequence:
+              - service: mqtt.publish
+                data:
+                  topic: bus/beacon/config/set
+                  qos: 1
+                  payload: >-
+                    {
+                      "request_id":"ha-add-{{ now().timestamp() | int }}{{ range(1000) | random }}",
+                      "action":"add",
+                      "id":{{ states('input_text.bus_beacon_id') | tojson }},
+                      "person_name":{{ states('input_text.bus_person_name') | tojson }},
+                      "type":"ibeacon",
+                      "uuid":{{ states('input_text.bus_ibeacon_uuid') | tojson }},
+                      "major":{{ states('input_number.bus_ibeacon_major') | int }},
+                      "minor":{{ states('input_number.bus_ibeacon_minor') | int }},
+                      "rssi":{{ states('input_number.bus_beacon_rssi') | int }},
+                      "discord_channel_id":{{ states('input_text.bus_discord_channel_id') | tojson }},
+                      "home_zone_entity":{{ states('input_text.bus_home_zone_entity') | tojson }},
+                      "notes":{{ states('input_text.bus_person_notes') | tojson }}
+                    }
+        default:
+          - service: persistent_notification.create
+            data:
+              title: Bus Add Person failed
+              message: "Beacon id must be 1-31 chars of A-Z, a-z, 0-9, _ or - and the iBeacon UUID must be 8-4-4-4-12 hex format."
+
+  bus_update_person_beacon:
+    alias: Bus Update Person Beacon
+    mode: single
+    sequence:
+      - choose:
+          - conditions:
+              - condition: template
+                value_template: >-
+                  {{ states('input_text.bus_beacon_id') | regex_match('^[A-Za-z0-9_-]{1,31}$') }}
+            sequence:
+              - service: mqtt.publish
+                data:
+                  topic: bus/beacon/config/set
+                  qos: 1
+                  payload: >-
+                    {
+                      "request_id":"ha-update-{{ now().timestamp() | int }}{{ range(1000) | random }}",
+                      "action":"update",
+                      "id":{{ states('input_text.bus_beacon_id') | tojson }},
+                      "person_name":{{ states('input_text.bus_person_name') | tojson }},
+                      "rssi":{{ states('input_number.bus_beacon_rssi') | int }},
+                      "active":{{ 'true' if is_state('input_boolean.bus_person_active','on') else 'false' }},
+                      "discord_channel_id":{{ states('input_text.bus_discord_channel_id') | tojson }},
+                      "home_zone_entity":{{ states('input_text.bus_home_zone_entity') | tojson }},
+                      "notes":{{ states('input_text.bus_person_notes') | tojson }}
+                    }
+        default:
+          - service: persistent_notification.create
+            data:
+              title: Bus Update Person failed
+              message: "Beacon id must be 1-31 chars of A-Z, a-z, 0-9, _ or -."
+
+  bus_remove_person_beacon:
+    alias: Bus Remove Person Beacon
+    mode: single
+    sequence:
+      - choose:
+          - conditions:
+              - condition: template
+                value_template: >-
+                  {{ states('input_text.bus_beacon_id') | regex_match('^[A-Za-z0-9_-]{1,31}$') }}
+            sequence:
+              - service: mqtt.publish
+                data:
+                  topic: bus/beacon/config/set
+                  qos: 1
+                  payload: >-
+                    {
+                      "request_id":"ha-remove-{{ now().timestamp() | int }}{{ range(1000) | random }}",
+                      "action":"remove",
+                      "id":{{ states('input_text.bus_beacon_id') | tojson }}
+                    }
+        default:
+          - service: persistent_notification.create
+            data:
+              title: Bus Remove Person failed
+              message: "Beacon id must be 1-31 chars of A-Z, a-z, 0-9, _ or -."
+
+  bus_list_person_beacons:
+    alias: Bus List Person Beacons
+    mode: single
+    sequence:
+      - service: mqtt.publish
+        data:
+          topic: bus/beacon/config/set
+          qos: 1
+          payload: '{"request_id":"ha-list-{{ now().timestamp() | int }}{{ range(1000) | random }}","action":"list"}'
+
+  bus_acknowledge_distress:
+    alias: Bus Acknowledge Distress
+    mode: single
+    sequence:
+      - service: mqtt.publish
+        data:
+          topic: bus/command
+          qos: 1
+          payload: distress_ack
+
+  bus_clear_distress:
+    alias: Bus Clear Distress
+    mode: single
+    sequence:
+      - service: mqtt.publish
+        data:
+          topic: bus/command
+          qos: 1
+          payload: distress_clear
+
+  bus_disarm:
+    alias: Bus Disarm After Cabin Check
+    description: >-
+      Disarm until the next ignition edge. Requires a fresh physical cabin-clear
+      confirmation and refuses active or pending unacknowledged distress.
+    mode: single
+    sequence:
+      - variables:
+          request_id: >-
+            ha-disarm-{{ now().strftime('%Y%m%d%H%M%S%f') }}
+          current_state: "{{ states('sensor.bus_state') }}"
+      - choose:
+          - conditions:
+              - condition: state
+                entity_id: input_boolean.bus_cabin_clear_confirmed
+                state: "on"
+              - condition: template
+                value_template: >-
+                  {{ current_state in ['active', 'exit_grace', 'armed', 'acked',
+                                       'disarmed'] }}
+            sequence:
+              # Consume the confirmation before sending. A second disarm always
+              # requires another deliberate cabin check.
+              - action: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.bus_cabin_clear_confirmed
+              - action: mqtt.publish
+                data:
+                  topic: bus/command
+                  qos: 1
+                  payload: >-
+                    {
+                      "request_id":{{ request_id | tojson }},
+                      "action":"disarm",
+                      "confirm_cabin_clear":true,
+                      "source":"home_assistant"
+                    }
+              - wait_template: >-
+                  {{ state_attr('sensor.bus_command_result', 'request_id') == request_id and
+                     (state_attr('sensor.bus_command_result', 'ok') != true or
+                      states('sensor.bus_state_detail') == 'disarmed') }}
+                timeout: "00:00:10"
+                continue_on_timeout: true
+              - choose:
+                  - conditions:
+                      - condition: template
+                        value_template: >-
+                          {{ wait.completed and
+                             state_attr('sensor.bus_command_result', 'ok') == true and
+                             states('sensor.bus_state_detail') == 'disarmed' }}
+                    sequence:
+                      - action: persistent_notification.create
+                        data:
+                          title: Bus disarmed
+                          message: >-
+                            Firmware confirmed {{ state_attr('sensor.bus_command_result', 'reason') }}.
+                            Detection will resume on the next ignition cycle.
+                default:
+                  - action: persistent_notification.create
+                    data:
+                      title: Bus disarm failed
+                      message: >-
+                        {% if not wait.completed %}
+                          No matching firmware response within 10 seconds. Treat the bus as still armed.
+                        {% else %}
+                          Firmware refused disarm: {{ state_attr('sensor.bus_command_result', 'reason') }}.
+                        {% endif %}
+        default:
+          - action: persistent_notification.create
+            data:
+              title: Bus disarm blocked
+              message: >-
+                {% if not is_state('input_boolean.bus_cabin_clear_confirmed', 'on') %}
+                  Physically inspect the cabin, then turn on “Bus Cabin Physically Checked Clear” and retry.
+                {% else %}
+                  Current state is {{ current_state }}. A pending or active distress must be acknowledged first.
+                {% endif %}
+
+  bus_test_distress:
+    alias: Bus Test Distress
+    mode: single
+    sequence:
+      - service: mqtt.publish
+        data:
+          topic: bus/command
+          qos: 1
+          payload: distress_test
+
+automation:
+  # Rebuild the beacon dropdown options whenever the roster updates.
+  # sensor.bus_roster has a `beacons` attribute (list of {id, person_name, ...}).
+  # We build "person_name (id)" labels so the user sees who they're picking,
+  # and the automation copies the raw id into input_text.bus_beacon_id.
+  - id: bus_sync_beacon_dropdown
+    alias: Bus Sync Beacon Dropdown
+    mode: restart
+    trigger:
+      - platform: state
+        entity_id: sensor.bus_roster
+        attribute: beacons
+      # Fallback: also fire when count changes (e.g. add/remove)
+      - platform: state
+        entity_id: sensor.bus_roster
+    action:
+      - action: input_select.set_options
+        target:
+          entity_id: input_select.bus_beacon_selector
+        data:
+          options: >-
+            {% set beacons = state_attr('sensor.bus_roster', 'beacons')
+               if state_attr('sensor.bus_roster', 'beacons') is iterable
+               else [] %}
+            {% set ns = namespace(opts=[]) %}
+            {% for b in beacons %}
+              {% set label = b.person_name ~ ' (' ~ b.id ~ ')'
+                 if b.person_name is defined and b.person_name | length > 0
+                 else b.id %}
+              {% set ns.opts = ns.opts + [label] %}
+            {% endfor %}
+            {{ ["(new — type ID below)"] + ns.opts }}
+
+  # When the user picks a beacon from the dropdown, copy the raw id into
+  # input_text.bus_beacon_id so existing scripts work unchanged.
+  - id: bus_beacon_select_to_text
+    alias: Bus Beacon Select to Text
+    mode: restart
+    trigger:
+      - platform: state
+        entity_id: input_select.bus_beacon_selector
+    condition:
+      - condition: template
+        value_template: >-
+          {{ trigger.to_state.state != '(new — type ID below)' }}
+    action:
+      - action: input_text.set_value
+        target:
+          entity_id: input_text.bus_beacon_id
+        data:
+          value: >-
+            {% set sel = states('input_select.bus_beacon_selector') %}
+            {% set beacons = state_attr('sensor.bus_roster', 'beacons')
+               if state_attr('sensor.bus_roster', 'beacons') is iterable
+               else [] %}
+            {% for b in beacons %}
+              {% set label = b.person_name ~ ' (' ~ b.id ~ ')'
+                 if b.person_name is defined and b.person_name | length > 0
+                 else b.id %}
+              {% if label == sel %}
+                {{ b.id }}
+              {% endif %}
+            {% endfor %}
+
+  # A cabin-clear confirmation is deliberately short-lived. The disarm script
+  # consumes it immediately; this catches confirmations that were set but not
+  # followed by a disarm request.
+  - id: bus_cabin_clear_confirmation_expires
+    alias: Bus Cabin Clear Confirmation Expires
+    mode: restart
+    trigger:
+      - platform: state
+        entity_id: input_boolean.bus_cabin_clear_confirmed
+        to: "on"
+        for: "00:02:00"
+    action:
+      - action: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.bus_cabin_clear_confirmed
+      - action: persistent_notification.create
+        data:
+          title: Bus cabin check expired
+          message: "Cabin-clear confirmation expired after 2 minutes without a disarm."
+
+  # School zone enter/leave. Bus location is represented by person.bus_tracker.
+  - id: bus_school_zone_enter
+    alias: Bus School Zone Enter
+    mode: single
+    trigger:
+      - platform: zone
+        entity_id: person.bus_tracker
+        zone: zone.school
+        event: enter
+    action:
+      - service: mqtt.publish
+        data:
+          topic: bus/ha/location/event
+          qos: 1
+          payload: >-
+            {
+              "event":"zone_enter",
+              "zone_entity":"zone.school",
+              "zone_name":"School",
+              "source":"home_assistant",
+              "timestamp":"{{ utcnow().strftime('%Y-%m-%dT%H:%M:%SZ') }}"
+            }
+
+  - id: bus_school_zone_leave
+    alias: Bus School Zone Leave
+    mode: single
+    trigger:
+      - platform: zone
+        entity_id: person.bus_tracker
+        zone: zone.school
+        event: leave
+    action:
+      - service: mqtt.publish
+        data:
+          topic: bus/ha/location/event
+          qos: 1
+          payload: >-
+            {
+              "event":"zone_leave",
+              "zone_entity":"zone.school",
+              "zone_name":"School",
+              "source":"home_assistant",
+              "timestamp":"{{ utcnow().strftime('%Y-%m-%dT%H:%M:%SZ') }}"
+            }
+
+  # Copy this pair for each child's home zone, replacing the example values.
+  # See the Blueprint `Bus Example Home Zone` for a one-click alternative.
+  - id: bus_alice_home_zone_enter
+    alias: Bus Example Home Zone Enter
+    mode: single
+    trigger:
+      - platform: zone
+        entity_id: person.bus_tracker
+        zone: zone.example_home
+        event: enter
+    action:
+      - service: mqtt.publish
+        data:
+          topic: bus/ha/location/event
+          qos: 1
+          payload: >-
+            {
+              "event":"zone_enter",
+              "zone_entity":"zone.example_home",
+              "zone_name":"Example Home",
+              "source":"home_assistant",
+              "timestamp":"{{ utcnow().strftime('%Y-%m-%dT%H:%M:%SZ') }}"
+            }
+
+  - id: bus_alice_home_zone_leave
+    alias: Bus Example Home Zone Leave
+    mode: single
+    trigger:
+      - platform: zone
+        entity_id: person.bus_tracker
+        zone: zone.example_home
+        event: leave
+    action:
+      - service: mqtt.publish
+        data:
+          topic: bus/ha/location/event
+          qos: 1
+          payload: >-
+            {
+              "event":"zone_leave",
+              "zone_entity":"zone.example_home",
+              "zone_name":"Example Home",
+              "source":"home_assistant",
+              "timestamp":"{{ utcnow().strftime('%Y-%m-%dT%H:%M:%SZ') }}"
+            }
+
+  # Retained HA location state for the Discord relay emergency embed.
+  # The relay subscribes to bus/ha/location/state and uses this instead of the
+  # firmware GPS payload when it includes a location in Discord.
+  - id: bus_publish_phone_location_state
+    alias: Bus Publish HA Location State
+    mode: restart
+    trigger:
+      - platform: state
+        entity_id: person.bus_tracker
+      - platform: homeassistant
+        event: start
+    action:
+      - service: mqtt.publish
+        data:
+          topic: bus/ha/location/state
+          qos: 1
+          retain: true
+          payload: >-
+            {
+              "source":"home_assistant",
+              "tracker_entity":"person.bus_tracker",
+              "tracker_state":{{ states('person.bus_tracker') | tojson }},
+              "latitude":{{ state_attr('person.bus_tracker', 'latitude') | default(none) | tojson }},
+              "longitude":{{ state_attr('person.bus_tracker', 'longitude') | default(none) | tojson }},
+              "gps_accuracy":{{ state_attr('person.bus_tracker', 'gps_accuracy') | default(none) | tojson }},
+              "timestamp":"{{ utcnow().strftime('%Y-%m-%dT%H:%M:%SZ') }}"
+            }
+
+  # Mobile-app push on emergency distress (independent channel alongside Discord).
+  # Configure the notify service for each caregiver device in your HA mobile app.
+  - id: bus_distress_push_alert
+    alias: Bus Distress Mobile Push
+    mode: single
+    trigger:
+      - platform: mqtt
+        topic: bus/distress/state
+    condition:
+      - condition: template
+        value_template: >-
+          {{ trigger.payload_json.severity == 'emergency' and
+             trigger.payload_json.state in ['active', 'distress_active'] }}
+    action:
+      - service: notify.notify
+        data:
+          title: "EMERGENCY: Child stuck in van"
+          message: >-
+            {% set person = trigger.payload_json.person | default({}) %}
+            {% set bus_tracker = states.person.bus_tracker %}
+            {{ person.person_name | default(trigger.payload_json.detail | default('unknown')) }}
+            - Trigger: {{ trigger.payload_json.trigger }}
+            {% if bus_tracker is not none %}
+            Location: {{ state_attr('person.bus_tracker', 'latitude') | default('n/a') }},
+            {{ state_attr('person.bus_tracker', 'longitude') | default('n/a') }}
+            ({{ states('person.bus_tracker') }})
+            {% endif %}
+          data:
+            push:
+              sound:
+                name: default
+                critical: 1
+                volume: 1.0
+
+  # Ignition-off reminder: 90 seconds into exit grace, push a phone notification
+  # so the operator confirms the cabin is empty before arming.
+  - id: bus_exit_grace_reminder
+    alias: Bus Exit Grace Reminder
+    mode: single
+    trigger:
+      - platform: state
+        entity_id: sensor.bus_state_detail
+        to: exit_grace
+        for: "00:01:30"
+    condition:
+      - condition: template
+        value_template: >-
+          {{ not is_state('input_boolean.bus_exit_grace_reminder_sent', 'on') and
+             state_attr('sensor.bus_state_detail', 'exit_grace_remaining_s') | default(0) | int <= 40 }}
+    action:
+      - service: input_boolean.turn_on
+        target:
+          entity_id: input_boolean.bus_exit_grace_reminder_sent
+      - service: notify.notify
+        data:
+          title: "Bus exiting grace"
+          message: >-
+            Bus will arm in
+            {{ state_attr('sensor.bus_state_detail', 'exit_grace_remaining_s') | default('about 30') }}
+            seconds - confirm cabin is empty.
+
+  - id: bus_exit_grace_reminder_resets
+    alias: Bus Exit Grace Reminder Resets
+    mode: restart
+    trigger:
+      - platform: state
+        entity_id: sensor.bus_state_detail
+        from: exit_grace
+    action:
+      - service: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.bus_exit_grace_reminder_sent
+
+  # Stale firmware telemetry: if bus/state hasn't updated in 3 minutes while
+  # the bus is armed, the firmware may be offline and safety signals unreliable.
+  # Use bus_state_detail.last_updated instead of the derived sensor.bus_state
+  # last_changed; retained bus/state JSON can refresh attributes without
+  # changing the plain state string.
+  - id: bus_stale_firmware_alert
+    alias: Bus Stale Firmware Alert
+    mode: single
+    trigger:
+      - platform: time_pattern
+        minutes: "/1"
+    condition:
+      - condition: template
+        value_template: "{{ states('sensor.bus_state_detail') in ['armed', 'distress_pending', 'distress_active', 'acked'] }}"
+      - condition: template
+        value_template: >-
+          {{ states.sensor.bus_state_detail is defined and
+             (now() - states.sensor.bus_state_detail.last_updated).total_seconds() | int > 180 }}
+    action:
+      - service: persistent_notification.create
+        data:
+          title: Bus firmware may be offline
+          message: "bus/state has not updated for more than 3 minutes while armed. Check firmware / MQTT connectivity."
+      - service: notify.notify
+        data:
+          title: "Bus firmware offline?"
+          message: "bus/state has not updated while armed. Safety signals may be unavailable."
+
+  # Relay-down alert: if the Discord relay status sensor goes offline/error for >60s.
+  - id: bus_relay_down_alert
+    alias: Bus Relay Down Alert
+    mode: single
+    trigger:
+      - platform: state
+        entity_id: sensor.bus_relay_status
+        to: "offline"
+        for:
+          seconds: 60
+      - platform: state
+        entity_id: sensor.bus_relay_status
+        to: "error"
+        for:
+          seconds: 60
+    action:
+      - service: notify.notify
+        data:
+          title: "Bus Discord relay unreachable"
+          message: "Relay status is {{ states('sensor.bus_relay_status') }}. Discord notifications may not be delivering."
+
+# Lovelace dashboard lives in homeassistant/dashboard.yaml. Keep the dashboard
+# there so the package does not carry a stale second copy of entity IDs/cards.

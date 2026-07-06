@@ -1,0 +1,75 @@
+{
+  "scenario": "T-HA-IGN-01",
+  "started_at": "2026-07-04T19:18:03.489+07:00",
+  "result": "pass",
+  "before": {
+    "state": "active",
+    "ignition_on": true,
+    "armed": false,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 2.535415,
+      "remote_uptime_s": 25664,
+      "remote_battery_mv": 0,
+      "seq": 12832,
+      "missed_seq": 4157
+    },
+    "timestamp": "2026-07-04T12:12:45Z"
+  },
+  "off_seen": true,
+  "off_state": {
+    "state": "armed",
+    "ignition_on": false,
+    "armed": true,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 0.934927,
+      "remote_uptime_s": 25984,
+      "remote_battery_mv": 0,
+      "seq": 12992,
+      "missed_seq": 4221
+    },
+    "timestamp": "2026-07-04T12:18:03Z"
+  },
+  "on_seen": true,
+  "on_state": {
+    "state": "active",
+    "ignition_on": true,
+    "armed": false,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 1.035878,
+      "remote_uptime_s": 25984,
+      "remote_battery_mv": 0,
+      "seq": 12992,
+      "missed_seq": 4221
+    },
+    "timestamp": "2026-07-04T12:18:03Z"
+  },
+  "scope": "MQTT source-state evidence for HA entities; not live HA screenshot",
+  "finished_at": "2026-07-04T19:18:20.813+07:00"
+}

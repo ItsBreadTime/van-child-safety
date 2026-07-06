@@ -1,0 +1,119 @@
+{
+  "scenario": "T-MQTT-RETAINED-01",
+  "created_at": "2026-07-04T12:07:27+07:00",
+  "result": "pass",
+  "checks": [
+    {
+      "name": "firmware_status_online",
+      "ok": true,
+      "detail": "bus/status='online'"
+    },
+    {
+      "name": "bus_state_present",
+      "ok": true,
+      "detail": "bus/state keys=['armed', 'ble_status', 'co2_status', 'distress_acknowledged', 'distress_active', 'exit_grace_remaining_s', 'gps_valid', 'ignition_espnow', 'ignition_on', 'ignition_source', 'ignition_source_status', 'ld2412_status', 'state', 'timestamp']"
+    },
+    {
+      "name": "relay_online",
+      "ok": true,
+      "detail": "relay status=online, mqtt=True, discord=True"
+    },
+    {
+      "name": "relay_error_clear",
+      "ok": true,
+      "detail": "relay_error={'status': 'clear', 'message': 'clear', 'timestamp': '2026-07-03T18:13:54Z'}"
+    },
+    {
+      "name": "distress_clear_retained",
+      "ok": true,
+      "detail": "distress retained payload=None"
+    },
+    {
+      "name": "active_not_armed_not_distress",
+      "ok": true,
+      "detail": "state=active, armed=False, distress=False"
+    },
+    {
+      "name": "ignition_espnow_ok",
+      "ok": true,
+      "detail": "ignition_on=True, source_status=ok"
+    },
+    {
+      "name": "sensor_statuses_reported",
+      "ok": true,
+      "detail": "co2=stale, ld=ok, ble=ok"
+    },
+    {
+      "name": "safety_sensors_ok_except_known_co2_stale",
+      "ok": true,
+      "detail": "co2=stale, ld=ok, ble=ok"
+    },
+    {
+      "name": "beacon_config_present",
+      "ok": true,
+      "detail": "count=2, records=2"
+    },
+    {
+      "name": "beacon_state_topics_present_for_config",
+      "ok": true,
+      "detail": "missing=[], seen=['bread', 'crystal']"
+    },
+    {
+      "name": "beacon_config_embedded_state_matches_topics",
+      "ok": true,
+      "detail": "drift=[]"
+    },
+    {
+      "name": "telemetry_retained_present",
+      "ok": true,
+      "detail": "telemetry keys=['altitude', 'beacons', 'bus_armed', 'bus_empty', 'bus_state', 'co2', 'co2_baseline', 'co2_delta_3min', 'co2_delta_since_armed', 'course', 'detection_distance', 'gps_valid', 'humidity', 'ignition_on', 'latitude', 'ld2412_light', 'ld2412_moving', 'ld2412_still', 'ld2412_target', 'longitude', 'moving_distance', 'moving_energy', 'satellites', 'speed', 'still_distance', 'still_energy', 'temperature', 'wifi_rssi']"
+    },
+    {
+      "name": "telemetry_matches_bus_state_basics",
+      "ok": true,
+      "detail": "tele bus_state=active, ignition=True, armed=False"
+    }
+  ],
+  "ok_count": 14,
+  "total_checks": 14,
+  "failures": [],
+  "latest_topics": [
+    "bus/beacon/bread/state",
+    "bus/beacon/config/state",
+    "bus/beacon/crystal/state",
+    "bus/relay/discord/error",
+    "bus/relay/discord/last_event",
+    "bus/relay/discord/status",
+    "bus/state",
+    "bus/status",
+    "bus/telemetry"
+  ],
+  "beacon_states": {
+    "crystal": {
+      "id": "crystal",
+      "name": "crystal",
+      "state": "near",
+      "rssi": -50,
+      "timestamp": "2026-07-04T05:05:27Z",
+      "person_name": "Crystal",
+      "rssi_threshold": -75,
+      "active": true,
+      "discord_channel_id": "000000000000000000",
+      "home_zone_entity": "zone.example_home",
+      "last_seen_age_s": 1
+    },
+    "bread": {
+      "id": "bread",
+      "name": "bread",
+      "state": "absent",
+      "rssi": 0,
+      "timestamp": "2026-07-04T05:05:27Z",
+      "person_name": "Bread",
+      "rssi_threshold": -75,
+      "active": true,
+      "discord_channel_id": "000000000000000000",
+      "home_zone_entity": "zone.example_home",
+      "last_seen_age_s": -1
+    }
+  }
+}

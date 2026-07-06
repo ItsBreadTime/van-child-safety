@@ -1,0 +1,247 @@
+--------- beginning of system
+07-04 00:40:47.637 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:47.638 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:47.639 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:47.645 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:47.662 <pid> <pid> I ActivityManager: Force stopping com.example.redacted appid=<id> user=<id>: from process=<id>
+07-04 00:40:47.674 <pid> <pid> W ActivityManager: Invalid packageName: com.example.redacted
+--------- beginning of main
+07-04 00:40:47.758 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:40:47.772 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:40:47.775 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:40:48.887 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:40:48.888 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:40:48.906 <pid> <pid> D BluetoothLeAdvertiser: TxPower == ADVERTISE_TX_POWER_HIGH
+07-04 00:40:48.909 <pid> <pid> I BreadBeaconTest: advertise_start_requested uuid=00000000-0000-4000-8000-000000000000 major=1001 minor=2001
+07-04 00:40:48.928 <pid> <pid> I BreadBeaconTest: advertise_start_success
+07-04 00:40:50.138 <pid> <pid> W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.example.redacted } U=0: not found
+07-04 00:40:53.601 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:40:53.613 <pid> <pid> I BreadBeaconTest: advertise_stop_requested
+07-04 00:40:53.614 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:40:53.636 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for service {com.example.redacted} caller=android
+07-04 00:40:53.654 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:40:53.921 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1288 com.example.redacted:1269 com.example.redacted:912 com.example.redacted:300 android.app.job.IJobCallback$Stub.onTransact:280 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:40:53.941 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1288 com.example.redacted:848 com.example.redacted:315 android.app.job.IJobCallback$Stub.onTransact:313 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+07-04 00:40:55.188 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:55.659 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:56.441 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:56.755 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:58.377 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:58.380 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:58.384 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:58.397 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:58.822 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:40:58.854 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:03.315 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: com.example.redacted; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { xflg=0x4 cmp=com.example.redacted }; code:PROC_STATE_TOP; tempAllowListReason:<,reasonCode:SYSTEM_ALLOW_LISTED,duration=<duration>,callingUid=<id>>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:41:03.321 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: com.example.redacted; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { cmp=com.example.redacted }; code:PROC_STATE_TOP; tempAllowListReason:<,reasonCode:SYSTEM_ALLOW_LISTED,duration=<duration>,callingUid=<id>>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:41:03.510 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: com.example.redacted; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { cmp=com.example.redacted }; code:PROC_STATE_TOP; tempAllowListReason:<,reasonCode:SYSTEM_ALLOW_LISTED,duration=<duration>,callingUid=<id>>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:41:05.508 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:05.510 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:05.512 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:08.872 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:08.880 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:08.907 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:08.911 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:09.854 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:41:09.855 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:41:09.867 <pid> <pid> D BluetoothLeAdvertiser: TxPower == ADVERTISE_TX_POWER_HIGH
+07-04 00:41:09.869 <pid> <pid> I BreadBeaconTest: advertise_start_requested uuid=00000000-0000-4000-8000-000000000000 major=1001 minor=2001
+07-04 00:41:09.890 <pid> <pid> I BreadBeaconTest: advertise_start_success
+07-04 00:41:09.931 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:10.904 <pid> <pid> W ActivityManager: Unbind failed: could not find connection for android.os.BinderProxy@<object>
+07-04 00:41:10.908 <pid> <pid> W ActivityManager: Unable to start service Intent { act=android.telephony.satellite.SatelliteService xflg=0x4 pkg=com.example.redacted } U=0: not found
+07-04 00:41:12.511 <pid> <pid> D ActivityManager: Stop FGS timeout: ServiceRecord{56b7955 u0 com.example.redacted c:com.example.redacted}
+07-04 00:41:12.512 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: com.example.redacted processName:com.example.redacted ChannelId:downloading foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:41:12.553 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for next-top-activity {com.example.redacted} caller=com.example.redacted
+07-04 00:41:12.553 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:12.553 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 905): app_launch
+07-04 00:41:12.557 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 905): app_launch
+07-04 00:41:14.344 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:41:14.351 <pid> <pid> I BreadBeaconTest: advertise_stop_requested
+07-04 00:41:14.352 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:41:14.423 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for service {com.example.redacted} caller=android
+07-04 00:41:14.423 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:14.691 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:2264 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.695 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:4690 com.example.redacted:4651 com.example.redacted:4686 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.698 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:2264 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.704 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:4690 com.example.redacted:4651 com.example.redacted:4686 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.736 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1288 com.example.redacted:1269 com.example.redacted:912 com.example.redacted:300 android.app.job.IJobCallback$Stub.onTransact:280 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.777 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:4690 com.example.redacted:4651 com.example.redacted:4686 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.786 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:2264 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.792 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:2264 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.795 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:4690 com.example.redacted:4651 com.example.redacted:4686 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.813 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:4690 com.example.redacted:4651 com.example.redacted:4686 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.836 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1288 com.example.redacted:848 com.example.redacted:315 android.app.job.IJobCallback$Stub.onTransact:313 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.842 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:4690 com.example.redacted:4651 com.example.redacted:4686 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.862 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:4690 com.example.redacted:4651 com.example.redacted:4686 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.876 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:4690 com.example.redacted:4651 com.example.redacted:4686 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:41:14.971 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:15.011 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:16.064 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:16.111 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:16.112 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:16.151 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for service {com.example.redacted} caller=com.example.redacted
+07-04 00:41:16.151 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:16.318 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:16.319 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 0): isolated not needed
+07-04 00:41:16.403 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for broadcast {com.example.redacted} caller=android
+07-04 00:41:16.403 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:18.223 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:139 com.example.redacted:579 com.example.redacted:3592 com.example.redacted:0 com.example.redacted:0 com.example.redacted:1418 com.example.redacted:361 com.example.redacted:269 android.os.Handler.dispatchMessage:114 com.example.redacted:134 
+07-04 00:41:18.494 <pid> <pid> W ActivityManager: Unable to start service Intent { act=com.example.redacted xflg=0x4 pkg=com.example.redacted (has extras) } U=0: not found
+07-04 00:41:18.520 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for broadcast {com.example.redacted} caller=null
+07-04 00:41:18.521 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:18.867 <pid> <pid> W ActivityManager: Slow operation: 54ms so far, now at startProcess: done starting proc!
+07-04 00:41:18.989 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:19.016 <pid> <pid> W ActivityManager: Slow operation: 162ms so far, now at startProcess: done updating battery stats
+07-04 00:41:19.020 <pid> <pid> W ActivityManager: Slow operation: 166ms so far, now at startProcess: building log message
+07-04 00:41:19.020 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for broadcast {com.example.redacted} caller=null
+07-04 00:41:19.020 <pid> <pid> W ActivityManager: Slow operation: 166ms so far, now at startProcess: starting to update pids map
+07-04 00:41:19.026 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:19.026 <pid> <pid> W ActivityManager: Slow operation: 172ms so far, now at startProcess: done updating pids map
+07-04 00:41:19.026 <pid> <pid> W ActivityManager: Slow operation: 57ms so far, now at startProcess: asking zygote to start proc
+07-04 00:41:19.104 <pid> <pid> W ActivityManager: Slow operation: 135ms so far, now at startProcess: returned from zygote!
+07-04 00:41:19.104 <pid> <pid> W ActivityManager: Slow operation: 135ms so far, now at startProcess: done updating battery stats
+07-04 00:41:19.134 <pid> <pid> W ActivityManager: Slow operation: 166ms so far, now at startProcess: building log message
+07-04 00:41:19.135 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for content provider {com.example.redacted} caller=com.example.redacted
+07-04 00:41:19.135 <pid> <pid> W ActivityManager: Slow operation: 166ms so far, now at startProcess: starting to update pids map
+07-04 00:41:19.135 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:19.135 <pid> <pid> W ActivityManager: Slow operation: 166ms so far, now at startProcess: done updating pids map
+07-04 00:41:19.146 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:19.234 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 905): normal_mem_pressure
+07-04 00:41:19.239 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:19.348 <pid> <pid> W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.example.redacted } U=0: not found
+07-04 00:41:19.453 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:19.455 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:19.465 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:19.627 <pid> <pid> W ActivityManager: Slow operation: 73ms so far, now at startProcess: done updating battery stats
+07-04 00:41:19.629 <pid> <pid> W ActivityManager: Slow operation: 75ms so far, now at startProcess: building log message
+07-04 00:41:19.630 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for  {com.example.redacted:0} caller=com.example.redacted
+07-04 00:41:19.630 <pid> <pid> W ActivityManager: Slow operation: 77ms so far, now at startProcess: starting to update pids map
+07-04 00:41:19.631 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:19.631 <pid> <pid> W ActivityManager: Slow operation: 77ms so far, now at startProcess: done updating pids map
+07-04 00:41:19.687 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:19.821 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:19.876 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:5455 com.example.redacted:5328 com.example.redacted:4690 com.example.redacted:4651 com.example.redacted:4686 android.accounts.IAccountAuthenticatorResponse$Stub.onTransact:106 android.os.Binder.execTransactInternal:1433 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> 
+07-04 00:41:19.962 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:20.007 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:20.012 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:20.053 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:21.787 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:21.792 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:22.070 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:22.071 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:25.245 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:25.313 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:25.405 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:26.845 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for service {app.revanced.android.gms/org.microg.gms.gcm.McsService} caller=app.revanced.android.gms
+07-04 00:41:26.845 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:28.901 <pid> <pid> I ActivityManager: Process com.example.redacted (pid=<id>) has died: hvy CEM 
+07-04 00:41:28.912 <pid> <pid> W ActivityManager: setHasOverlayUi called on unknown pid=<id>
+07-04 00:41:28.913 <pid> <pid> I ActivityManager: Process com.example.redacted:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 (pid=<id>) has died: fg  SVC 
+07-04 00:41:28.920 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:29.958 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:41:29.959 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:29.972 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:41:30.014 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:30.014 <pid> <pid> D BluetoothLeAdvertiser: TxPower == ADVERTISE_TX_POWER_HIGH
+07-04 00:41:30.017 <pid> <pid> I BreadBeaconTest: advertise_start_requested uuid=00000000-0000-4000-8000-000000000000 major=1001 minor=2001
+07-04 00:41:30.056 <pid> <pid> I BreadBeaconTest: advertise_start_success
+07-04 00:41:30.189 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:30.243 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:30.840 <pid> <pid> W ActivityManager: Receiver with filter android.content.IntentFilter@<object> already registered for pid=<id>, callerPackage is com.example.redacted
+07-04 00:41:30.876 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for service {com.example.redacted} caller=com.example.redacted
+07-04 00:41:30.876 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:30.908 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for content provider {com.example.redacted} caller=com.example.redacted
+07-04 00:41:30.908 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:31.006 <pid> <pid> W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.example.redacted } U=0: not found
+07-04 00:41:31.211 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 500): normal_mem_pressure
+07-04 00:41:31.356 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:31.376 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:32.014 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for broadcast {app.revanced.android.gms/org.microg.gms.gcm.TriggerReceiver} caller=app.revanced.android.gms
+07-04 00:41:32.014 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:32.861 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for content provider {com.example.redacted} caller=com.example.redacted
+07-04 00:41:32.861 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:33.696 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:34.242 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:41:34.249 <pid> <pid> I BreadBeaconTest: advertise_stop_requested
+07-04 00:41:34.249 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:41:34.309 <pid> <pid> I ActivityManager: updateOomAdj start time is before than pendingPid added, don't delete it
+07-04 00:41:34.339 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for service {com.example.redacted} caller=android
+07-04 00:41:34.350 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:34.351 <pid> <pid> W ActivityManager: Slow operation: 58ms so far, now at startProcess: done updating pids map
+07-04 00:41:34.623 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1374 com.example.redacted:1285 com.example.redacted:1269 com.example.redacted:916 com.example.redacted:295 android.app.job.IJobCallback$Stub.onTransact:269 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> 
+07-04 00:41:34.915 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:34.944 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:35.126 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:35.238 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:35.239 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:35.811 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:36.094 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:36.100 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:36.105 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:36.159 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 800): normal_mem_pressure
+07-04 00:41:36.758 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:37.652 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for broadcast {app.revanced.android.gms/org.microg.gms.gcm.TriggerReceiver} caller=app.revanced.android.gms
+07-04 00:41:37.653 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:37.932 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for prestart-top-activity {com.example.redacted} caller=null
+07-04 00:41:37.932 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:37.955 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 915): app_launch
+07-04 00:41:38.032 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 915): app_launch
+07-04 00:41:38.096 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 915): app_launch
+07-04 00:41:38.100 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 905): app_launch
+07-04 00:41:38.170 <pid> <pid> W ActivityManager: Permission Denial: getCurrentUser() from pid=<pid>, uid=<id> requires android.permission.INTERACT_ACROSS_USERS
+07-04 00:41:38.705 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:40.227 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:40.450 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:40.457 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:40.460 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:41.719 <pid> <pid> I ActivityManager: Start proc <pid>:<process> for service {com.example.redacted} caller=android
+07-04 00:41:41.719 <pid> <pid> I ActivityManager: ProcessObserver broadcast disabled
+07-04 00:41:41.849 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1374 com.example.redacted:1285 com.example.redacted:1269 com.example.redacted:916 com.example.redacted:295 android.app.job.IJobCallback$Stub.onTransact:269 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> 
+07-04 00:41:41.856 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1374 com.example.redacted:1285 com.example.redacted:1269 com.example.redacted:916 com.example.redacted:295 android.app.job.IJobCallback$Stub.onTransact:269 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> 
+07-04 00:41:41.859 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1374 com.example.redacted:1285 com.example.redacted:1269 com.example.redacted:916 com.example.redacted:295 android.app.job.IJobCallback$Stub.onTransact:269 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> 
+07-04 00:41:41.861 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1374 com.example.redacted:1285 com.example.redacted:1269 com.example.redacted:916 com.example.redacted:295 android.app.job.IJobCallback$Stub.onTransact:269 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> 
+07-04 00:41:41.863 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1374 com.example.redacted:1285 com.example.redacted:1269 com.example.redacted:916 com.example.redacted:295 android.app.job.IJobCallback$Stub.onTransact:269 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> 
+07-04 00:41:41.866 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1374 com.example.redacted:1285 com.example.redacted:1269 com.example.redacted:916 com.example.redacted:295 android.app.job.IJobCallback$Stub.onTransact:269 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> 
+07-04 00:41:42.030 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1288 com.example.redacted:848 com.example.redacted:315 android.app.job.IJobCallback$Stub.onTransact:313 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+07-04 00:41:45.765 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:46.006 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:46.034 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:48.219 <pid> <pid> W ActivityManager: Receiver with filter android.content.IntentFilter@<object> already registered for pid=<id>, callerPackage is com.example.redacted
+07-04 00:41:50.154 <pid> <pid> W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.example.redacted } U=0: not found
+07-04 00:41:50.213 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:50.295 <pid> <pid> I ActivityManager: Killing <pid>:<process> (adj 800): normal_mem_pressure
+07-04 00:41:50.326 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:41:50.326 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:41:50.336 <pid> <pid> D BluetoothLeAdvertiser: TxPower == ADVERTISE_TX_POWER_HIGH
+07-04 00:41:50.338 <pid> <pid> I BreadBeaconTest: advertise_start_requested uuid=00000000-0000-4000-8000-000000000000 major=1001 minor=2001
+07-04 00:41:50.375 <pid> <pid> I BreadBeaconTest: advertise_start_success
+07-04 00:41:53.705 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:53.813 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:54.693 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:54.967 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:41:54.980 <pid> <pid> I BreadBeaconTest: advertise_stop_requested
+07-04 00:41:54.981 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:41:56.477 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:57.159 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:41:59.849 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:42:00.823 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:42:03.241 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:42:04.089 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:42:04.091 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:42:04.095 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:42:04.106 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:42:08.802 <pid> <pid> W ActivityManager: Unbind failed: could not find connection for android.os.BinderProxy@<object>
+07-04 00:42:08.804 <pid> <pid> W ActivityManager: Unable to start service Intent { act=android.telephony.satellite.SatelliteService xflg=0x4 pkg=com.example.redacted } U=0: not found
+07-04 00:42:10.390 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:42:10.391 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:42:10.401 <pid> <pid> D BluetoothLeAdvertiser: TxPower == ADVERTISE_TX_POWER_HIGH
+07-04 00:42:10.403 <pid> <pid> I BreadBeaconTest: advertise_start_requested uuid=00000000-0000-4000-8000-000000000000 major=1001 minor=2001
+07-04 00:42:10.417 <pid> <pid> I BreadBeaconTest: advertise_start_success
+07-04 00:42:15.107 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:42:15.117 <pid> <pid> I BreadBeaconTest: advertise_stop_requested
+07-04 00:42:15.117 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:42:18.644 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:42:30.764 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:42:30.779 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:42:30.780 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>

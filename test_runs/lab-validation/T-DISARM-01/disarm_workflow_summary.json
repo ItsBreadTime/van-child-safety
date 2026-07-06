@@ -1,0 +1,299 @@
+{
+  "scenario": "T-DISARM-01",
+  "started_at": "2026-07-04T19:10:42+07:00",
+  "request_id": "ch4-disarm-01-1783167042",
+  "steps": [
+    {
+      "name": "initial_state_seen",
+      "ok": true,
+      "at": "2026-07-04T19:10:42+07:00",
+      "extra": {
+        "state": "active",
+        "ignition_on": true,
+        "armed": false,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "stale",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "ok",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 3.278421,
+          "remote_uptime_s": 5034,
+          "remote_battery_mv": 0,
+          "seq": 2517,
+          "missed_seq": 0
+        },
+        "timestamp": "2026-07-04T06:28:56Z"
+      }
+    },
+    {
+      "name": "precheck_active_clear",
+      "ok": true,
+      "at": "2026-07-04T19:10:44+07:00",
+      "extra": {
+        "state": "active",
+        "ignition_on": true,
+        "armed": false,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "stale",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "ok",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 3.278421,
+          "remote_uptime_s": 5034,
+          "remote_battery_mv": 0,
+          "seq": 2517,
+          "missed_seq": 0
+        },
+        "timestamp": "2026-07-04T06:28:56Z"
+      }
+    },
+    {
+      "name": "armed_or_beyond_seen",
+      "ok": true,
+      "at": "2026-07-04T19:10:44+07:00",
+      "extra": {
+        "state": "armed",
+        "ignition_on": false,
+        "armed": true,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "error",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 1.727811,
+          "remote_uptime_s": 25544,
+          "remote_battery_mv": 0,
+          "seq": 12772,
+          "missed_seq": 4132
+        },
+        "timestamp": "2026-07-04T12:10:44Z"
+      }
+    },
+    {
+      "name": "distress_pending_seen",
+      "ok": true,
+      "at": "2026-07-04T19:10:44+07:00",
+      "extra": {
+        "state": "distress_pending",
+        "ignition_on": false,
+        "armed": true,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "error",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 1.841576,
+          "remote_uptime_s": 25544,
+          "remote_battery_mv": 0,
+          "seq": 12772,
+          "missed_seq": 4132
+        },
+        "timestamp": "2026-07-04T12:10:44Z"
+      }
+    },
+    {
+      "name": "distress_active_seen",
+      "ok": true,
+      "at": "2026-07-04T19:12:44+07:00",
+      "extra": {
+        "state": "distress_active",
+        "ignition_on": false,
+        "armed": true,
+        "exit_grace_remaining_s": 0,
+        "distress_active": true,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "ok",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 1.859224,
+          "remote_uptime_s": 25664,
+          "remote_battery_mv": 0,
+          "seq": 12832,
+          "missed_seq": 4157
+        },
+        "timestamp": "2026-07-04T12:12:44Z"
+      }
+    },
+    {
+      "name": "ack_seen",
+      "ok": true,
+      "at": "2026-07-04T19:12:44+07:00",
+      "extra": {
+        "state": "acked",
+        "ignition_on": false,
+        "armed": true,
+        "exit_grace_remaining_s": 0,
+        "distress_active": true,
+        "distress_acknowledged": true,
+        "gps_valid": false,
+        "co2_status": "ok",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 2.047299,
+          "remote_uptime_s": 25664,
+          "remote_battery_mv": 0,
+          "seq": 12832,
+          "missed_seq": 4157
+        },
+        "timestamp": "2026-07-04T12:12:44Z"
+      }
+    },
+    {
+      "name": "matching_command_result_seen",
+      "ok": true,
+      "at": "2026-07-04T19:12:44+07:00",
+      "extra": {
+        "request_id": "ch4-disarm-01-1783167042",
+        "action": "disarm",
+        "ok": true,
+        "status": "ok",
+        "reason": "disarmed",
+        "source": "chapter4_automated_test",
+        "state": "disarmed",
+        "ignition_on": false
+      }
+    },
+    {
+      "name": "disarmed_state_seen",
+      "ok": true,
+      "at": "2026-07-04T19:12:44+07:00",
+      "extra": {
+        "state": "disarmed",
+        "ignition_on": false,
+        "armed": false,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "ok",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 2.151616,
+          "remote_uptime_s": 25664,
+          "remote_battery_mv": 0,
+          "seq": 12832,
+          "missed_seq": 4157
+        },
+        "timestamp": "2026-07-04T12:12:44Z"
+      }
+    },
+    {
+      "name": "restored_active_clear",
+      "ok": true,
+      "at": "2026-07-04T19:12:44+07:00",
+      "extra": {
+        "state": "active",
+        "ignition_on": true,
+        "armed": false,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "ok",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 2.535415,
+          "remote_uptime_s": 25664,
+          "remote_battery_mv": 0,
+          "seq": 12832,
+          "missed_seq": 4157
+        },
+        "timestamp": "2026-07-04T12:12:45Z"
+      }
+    },
+    {
+      "name": "retained_distress_clear",
+      "ok": true,
+      "at": "2026-07-04T19:12:44+07:00",
+      "extra": ""
+    }
+  ],
+  "finished_at": "2026-07-04T19:12:44+07:00",
+  "final_state": {
+    "state": "active",
+    "ignition_on": true,
+    "armed": false,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 2.535415,
+      "remote_uptime_s": 25664,
+      "remote_battery_mv": 0,
+      "seq": 12832,
+      "missed_seq": 4157
+    },
+    "timestamp": "2026-07-04T12:12:45Z"
+  },
+  "final_distress_payload": "",
+  "matching_command_result": {
+    "request_id": "ch4-disarm-01-1783167042",
+    "action": "disarm",
+    "ok": true,
+    "status": "ok",
+    "reason": "disarmed",
+    "source": "chapter4_automated_test",
+    "state": "disarmed",
+    "ignition_on": false
+  },
+  "relay_status": {
+    "status": "online",
+    "mqtt_connected": true,
+    "discord_connected": true,
+    "firmware_online": true,
+    "roster_loaded": true,
+    "roster_count": 2,
+    "bus_state": "distress_pending",
+    "active_distress_id": null,
+    "operator_commands_enabled": false,
+    "operator_gateway_ready": false,
+    "version": "0.5.1",
+    "timestamp": "2026-07-04T12:10:44Z"
+  },
+  "relay_error": {
+    "status": "clear",
+    "message": "clear",
+    "timestamp": "2026-07-04T12:10:44Z"
+  },
+  "pass": true,
+  "pass_logic_note": "Firmware command result uses status=ok with reason=disarmed; this is the expected contract for a successful guarded disarm."
+}

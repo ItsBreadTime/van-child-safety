@@ -1,0 +1,5 @@
+timestamp,topic,bus_state,co2,co2_baseline,co2_delta_since_armed,co2_delta_3min,ld2412_target,gps_valid,wifi_rssi
+2026-07-04T00:00:51+0700,bus/telemetry,active,1055,0,1055,5,True,False,-62
+2026-07-04T00:01:21+0700,bus/telemetry,exit_grace,1057,0,1057,7,True,False,-58
+2026-07-04T00:01:51+0700,bus/telemetry,active,1057,0,1057,7,True,False,-60
+2026-07-04T00:02:21+0700,bus/telemetry,active,1059,0,1059,8,True,False,-64

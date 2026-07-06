@@ -1,0 +1,59 @@
+{
+  "scenario": "T-IGN-ESPNOW-03",
+  "started_at": "2026-07-05T10:31:54.465+07:00",
+  "stale_seen": false,
+  "exit_or_ignition_off_seen": false,
+  "ok_seen_after_replug": false,
+  "active_seen_after_replug": false,
+  "final_state": {
+    "state": "active",
+    "ignition_on": true,
+    "armed": false,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 1.159518,
+      "remote_uptime_s": 26108,
+      "remote_battery_mv": 0,
+      "seq": 13054,
+      "missed_seq": 4245
+    },
+    "timestamp": "2026-07-04T12:20:07Z"
+  },
+  "final_distress": null,
+  "result": "fail",
+  "rows": [
+    {
+      "at": "2026-07-05T10:25:53.520+07:00",
+      "state": {
+        "state": "active",
+        "ignition_on": true,
+        "armed": false,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "ok",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 1.159518,
+          "remote_uptime_s": 26108,
+          "remote_battery_mv": 0,
+          "seq": 13054,
+          "missed_seq": 4245
+        },
+        "timestamp": "2026-07-04T12:20:07Z"
+      }
+    }
+  ]
+}

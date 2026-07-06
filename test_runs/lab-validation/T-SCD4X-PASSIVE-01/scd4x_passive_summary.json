@@ -1,0 +1,113 @@
+{
+  "scenario": "T-SCD4X-PASSIVE-01",
+  "start": "2026-07-04T13:06:52.100+07:00",
+  "end": "2026-07-04T13:08:53.054+07:00",
+  "duration_s": 120,
+  "result": "pass",
+  "telemetry_count": 4,
+  "state_count": 1,
+  "co2_values": [
+    815,
+    816,
+    814,
+    817
+  ],
+  "co2_min": 814,
+  "co2_max": 817,
+  "co2_status_ok": true,
+  "co2_values_plausible": true,
+  "active_clear": true,
+  "nonempty_distress_count": 0,
+  "latest_state": {
+    "state": "active",
+    "ignition_on": true,
+    "armed": false,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 1.341726,
+      "remote_uptime_s": 2644,
+      "remote_battery_mv": 0,
+      "seq": 1322,
+      "missed_seq": 528
+    },
+    "timestamp": "2026-07-04T05:49:04Z"
+  },
+  "latest_telemetry": {
+    "temperature": 24.89,
+    "humidity": 48.6,
+    "co2": 817,
+    "co2_baseline": 781,
+    "co2_delta_since_armed": 36,
+    "ld2412_target": true,
+    "ld2412_moving": false,
+    "ld2412_still": true,
+    "moving_distance": 0,
+    "still_distance": 101,
+    "moving_energy": 0,
+    "still_energy": 100,
+    "detection_distance": 0,
+    "ld2412_light": 0,
+    "latitude": 0,
+    "longitude": 0,
+    "course": 0,
+    "altitude": 0,
+    "speed": 0,
+    "satellites": 0,
+    "gps_valid": false,
+    "co2_delta_3min": 1,
+    "wifi_rssi": -49,
+    "bus_empty": false,
+    "ignition_on": true,
+    "bus_armed": false,
+    "bus_state": "active",
+    "beacons": [
+      {
+        "id": "crystal",
+        "name": "crystal",
+        "person_name": "Crystal",
+        "state": "absent",
+        "rssi": -44,
+        "rssi_threshold": -75,
+        "discord_channel_id": "000000000000000000",
+        "home_zone_entity": "zone.example_home"
+      },
+      {
+        "id": "bread",
+        "name": "bread",
+        "person_name": "Bread",
+        "state": "absent",
+        "rssi": -63,
+        "rssi_threshold": -75,
+        "discord_channel_id": "000000000000000000",
+        "home_zone_entity": "zone.example_home"
+      }
+    ]
+  },
+  "latest_relay_status": {
+    "status": "online",
+    "mqtt_connected": true,
+    "discord_connected": true,
+    "firmware_online": true,
+    "roster_loaded": true,
+    "roster_count": 2,
+    "bus_state": "active",
+    "active_distress_id": null,
+    "operator_commands_enabled": false,
+    "operator_gateway_ready": false,
+    "version": "0.5.1",
+    "timestamp": "2026-07-04T05:49:18Z"
+  },
+  "latest_relay_error": {
+    "status": "clear",
+    "message": "clear",
+    "timestamp": "2026-07-04T05:49:18Z"
+  }
+}

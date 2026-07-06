@@ -1,0 +1,41 @@
+menu "Ignition Remote Configuration"
+
+    config ESPNOW_SECRET
+        string "ESP-NOW ignition secret"
+        default "change-me-ignition-secret"
+        help
+            MUST match the main firmware's CONFIG_ESPNOW_SECRET. Both sides
+            hash this string (FNV-1a) to a 32-bit magic that prefixes every
+            heartbeat. Change it to avoid cross-talk between adjacent buses.
+
+    config ESPNOW_HEARTBEAT_INTERVAL_MS
+        int "Heartbeat interval (ms)"
+        range 100 60000
+        default 2000
+        help
+            How often to broadcast the heartbeat. The main firmware declares
+            ignition OFF after ESPNOW_HEARTBEAT_TIMEOUT_MS (default 10 s)
+            without receiving one. At 2 s interval, 10 s = 5 missed frames.
+
+    config ESPNOW_CHANNEL
+        int "ESP-NOW WiFi channel (0=auto sweep, 1-13=fixed)"
+        range 0 13
+        default 0
+        help
+            Set to 0 for the normal ignition-remote behavior: each heartbeat
+            cycle is broadcast once on every 2.4 GHz channel so the main board
+            receives it even if the AP/router changes channel. Set to 1-13 only
+            for a fixed-channel lab setup where you know the main board's AP
+            channel will not move.
+
+    config ESPNOW_BATTERY_ADC_CHANNEL
+        int "Battery ADC channel (0-7, or -1 to disable)"
+        range -1 7
+        default -1
+        help
+            ADC1 channel to read for supply voltage (millivolts). Set to -1
+            to disable battery reporting (0 in the payload). If you wire a
+            divider from VCC/ACC to an ADC GPIO, set the channel number and
+            adjust the conversion in main.c.
+
+endmenu

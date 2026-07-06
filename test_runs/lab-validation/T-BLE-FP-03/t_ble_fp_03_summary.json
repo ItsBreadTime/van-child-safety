@@ -1,0 +1,49 @@
+{
+  "scenario": "T-BLE-FP-03",
+  "started_at": "2026-07-04T19:18:02.758+07:00",
+  "result": "pass",
+  "bread_absent_seen": true,
+  "active_clear_seen": true,
+  "nonempty_distress_count": 0,
+  "latest_bread": {
+    "id": "bread",
+    "name": "bread",
+    "state": "absent",
+    "rssi": 0,
+    "timestamp": "2026-07-04T06:28:56Z",
+    "person_name": "Bread",
+    "rssi_threshold": -75,
+    "active": true,
+    "discord_channel_id": "000000000000000000",
+    "home_zone_entity": "zone.example_home",
+    "last_seen_age_s": -1
+  },
+  "latest_state": {
+    "state": "active",
+    "ignition_on": true,
+    "armed": false,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 2.535415,
+      "remote_uptime_s": 25664,
+      "remote_battery_mv": 0,
+      "seq": 12832,
+      "missed_seq": 4157
+    },
+    "timestamp": "2026-07-04T12:12:45Z"
+  },
+  "latest_relay_error": {
+    "status": "clear",
+    "message": "clear",
+    "timestamp": "2026-07-04T12:12:45Z"
+  },
+  "finished_at": "2026-07-04T19:18:20.813+07:00"
+}

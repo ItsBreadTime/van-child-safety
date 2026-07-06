@@ -1,0 +1,81 @@
+{
+  "scenario": "T-ADVISORY-01",
+  "started_at": "2026-07-04T19:18:19.677+07:00",
+  "result": "pass",
+  "near_seen": true,
+  "armed_seen": true,
+  "absent_seen": true,
+  "beacon_silent_event_seen": true,
+  "events_after_start": [
+    {
+      "event": "ignition_on",
+      "state": "active",
+      "timestamp": "2026-07-04T12:18:03Z"
+    },
+    {
+      "event": "distress_clear",
+      "state": "active",
+      "timestamp": "2026-07-04T12:18:03Z"
+    },
+    {
+      "event": "distress_clear",
+      "state": "active",
+      "timestamp": "2026-07-04T12:18:03Z"
+    },
+    {
+      "event": "armed",
+      "state": "armed",
+      "timestamp": "2026-07-04T12:18:06Z"
+    },
+    {
+      "event": "beacon_silent_while_armed",
+      "beacon_id": "bread",
+      "timestamp": "2026-07-04T12:18:18Z"
+    },
+    {
+      "event": "armed",
+      "state": "armed",
+      "timestamp": "2026-07-04T12:18:18Z"
+    },
+    {
+      "event": "distress_clear",
+      "state": "armed",
+      "timestamp": "2026-07-04T12:18:18Z"
+    },
+    {
+      "event": "distress_clear",
+      "state": "armed",
+      "timestamp": "2026-07-04T12:18:19Z"
+    },
+    {
+      "event": "ignition_on",
+      "state": "active",
+      "timestamp": "2026-07-04T12:18:19Z"
+    }
+  ],
+  "restored_active_clear": true,
+  "latest_state": {
+    "state": "active",
+    "ignition_on": true,
+    "armed": false,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 1.081469,
+      "remote_uptime_s": 26000,
+      "remote_battery_mv": 0,
+      "seq": 13000,
+      "missed_seq": 4225
+    },
+    "timestamp": "2026-07-04T12:18:19Z"
+  },
+  "nonempty_distress_count": 0,
+  "finished_at": "2026-07-04T19:18:20.813+07:00"
+}

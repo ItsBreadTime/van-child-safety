@@ -1,0 +1,7 @@
+Android device: Xiaomi POCO 2412DPC0AG, Android 16.
+BeaconScope had no exported transmitter control API and was not debuggable.
+ADB shell input tap was blocked by INJECT_EVENTS policy.
+A throwaway package io.operator.busbeacontest was built in /tmp and installed to advertise the Bread iBeacon.
+Control path: adb shell am start -W -n io.operator.busbeacontest/.CommandActivity -a io.operator.busbeacontest.START|STOP.
+BeaconScope was force-stopped during this test so only the throwaway test app emitted the Bread iBeacon.
+Latency is measured from local command dispatch start to receipt of the corresponding MQTT bus/beacon/bread/state transition.

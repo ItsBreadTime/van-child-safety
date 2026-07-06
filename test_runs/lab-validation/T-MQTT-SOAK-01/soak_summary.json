@@ -1,0 +1,81 @@
+{
+  "scenario": "T-MQTT-SOAK-01",
+  "created_at": "2026-07-04T00:57:19.559+07:00",
+  "duration_s": 300,
+  "message_counts": {
+    "all": 39,
+    "bus_state": 5,
+    "bus_telemetry": 14,
+    "bus_event": 0,
+    "bus_distress_state": 1,
+    "beacon_state": 8,
+    "relay_status": 7,
+    "relay_error": 1
+  },
+  "telemetry_interval_ms": {
+    "count": 13,
+    "min": 0.3,
+    "median": 30004.0,
+    "mean": 24171.1,
+    "max": 74193.8
+  },
+  "latest_state": {
+    "state": "active",
+    "ignition_on": true,
+    "armed": false,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "ok",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 0.420525,
+      "remote_uptime_s": 2954,
+      "remote_battery_mv": 0,
+      "seq": 1477,
+      "missed_seq": 407
+    },
+    "timestamp": "2026-07-03T17:53:09Z"
+  },
+  "latest_telemetry_subset": {
+    "temperature": 27.14,
+    "humidity": 57.5,
+    "co2": 1108,
+    "co2_delta_3min": 4,
+    "ld2412_target": true,
+    "ld2412_still": true,
+    "still_distance": 103,
+    "still_energy": 100,
+    "gps_valid": false,
+    "wifi_rssi": -63,
+    "bus_state": "active",
+    "ignition_on": true,
+    "bus_armed": false
+  },
+  "latest_relay_status": {
+    "status": "online",
+    "mqtt_connected": true,
+    "discord_connected": true,
+    "firmware_online": true,
+    "roster_loaded": true,
+    "roster_count": 2,
+    "bus_state": "active",
+    "active_distress_id": null,
+    "operator_commands_enabled": true,
+    "operator_gateway_ready": true,
+    "version": "0.5.1",
+    "timestamp": "2026-07-03T17:53:30Z"
+  },
+  "latest_relay_error": {
+    "status": "clear",
+    "message": "clear",
+    "timestamp": "2026-07-03T17:51:36Z"
+  },
+  "event_payloads": [],
+  "distress_payloads": [
+    ""
+  ]
+}

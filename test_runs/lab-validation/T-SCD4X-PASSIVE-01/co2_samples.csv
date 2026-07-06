@@ -1,0 +1,5 @@
+stamp,co2,co2_baseline,co2_delta_since_armed,co2_delta_3min,temperature,humidity,bus_state,ignition_on,bus_armed
+2026-07-04T13:06:57+0700,815,781,34,-6,25.74,46.8,active,True,False
+2026-07-04T13:07:27+0700,816,781,35,-3,25.26,47.8,active,True,False
+2026-07-04T13:07:57+0700,814,781,33,-4,25,48.3,active,True,False
+2026-07-04T13:08:27+0700,817,781,36,1,24.89,48.6,active,True,False

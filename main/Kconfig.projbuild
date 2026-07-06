@@ -1,0 +1,318 @@
+menu "Van Child Safety Configuration"
+
+    menu "WiFi Networks"
+        config WIFI_SSID1
+            string "WiFi SSID 1"
+            default ""
+
+        config WIFI_PASS1
+            string "WiFi Password 1"
+            default ""
+
+        config WIFI_SSID2
+            string "WiFi SSID 2"
+            default ""
+
+        config WIFI_PASS2
+            string "WiFi Password 2"
+            default ""
+
+        config WIFI_SSID3
+            string "WiFi SSID 3"
+            default ""
+
+        config WIFI_PASS3
+            string "WiFi Password 3"
+            default ""
+
+        config WIFI_SSID4
+            string "WiFi SSID 4"
+            default ""
+
+        config WIFI_PASS4
+            string "WiFi Password 4"
+            default ""
+    endmenu
+
+    menu "WireGuard"
+        config WG_PRIVATE_KEY
+            string "WireGuard Private Key"
+            default ""
+
+        config WG_PUBLIC_KEY
+            string "WireGuard Peer Public Key"
+            default ""
+
+        config WG_PRESHARED_KEY
+            string "WireGuard Preshared Key"
+            default ""
+
+        config WG_ENDPOINT
+            string "WireGuard Peer Endpoint"
+            default "vpn.example.com"
+
+        config WG_PORT
+            int "WireGuard Peer Port"
+            range 1 65535
+            default 4040
+
+        config WG_ADDRESS
+            string "WireGuard Local Address"
+            default "192.0.2.11"
+
+        config WG_ADDRESS_MASK
+            string "WireGuard Address Mask"
+            default "255.255.255.0"
+
+        config WG_PERSISTENT_KEEPALIVE
+            int "WireGuard Persistent Keepalive (seconds)"
+            range 0 3600
+            default 25
+    endmenu
+
+    menu "MQTT"
+        config MQTT_BROKER_URI
+            string "MQTT Broker URI"
+            default "mqtt://mqtt.example.local:1883"
+
+        config MQTT_USERNAME
+            string "MQTT Username"
+            default ""
+
+        config MQTT_PASSWORD
+            string "MQTT Password"
+            default ""
+
+        config MQTT_BASE_TOPIC
+            string "MQTT Base Topic"
+            default "bus"
+
+        config HA_DISCOVERY_PREFIX
+            string "HA Discovery Prefix"
+            default "homeassistant"
+
+        config DEVICE_ID
+            string "Device ID"
+            default "bus_001"
+
+        config DEVICE_NAME
+            string "Device Name"
+            default "Van Safety Sensor"
+    endmenu
+
+    menu "OTA Update"
+        config OTA_TOKEN
+            string "OTA authentication token"
+            default ""
+            help
+                Token required to upload firmware via OTA.
+                Use: curl --data-binary @firmware.bin http://<wireguard-address>:3232/update?token=YOUR_TOKEN
+                If empty, the OTA server will not start (fail-closed).
+    endmenu
+
+    menu "Discord"
+        config DISCORD_WEBHOOK_URL
+            string "Discord Webhook URL"
+            default ""
+
+        config ENABLE_LEGACY_DISCORD_WEBHOOK
+            bool "Enable legacy firmware Discord webhook"
+            default n
+    endmenu
+
+    menu "Distress Timing"
+        config DISTRESS_INITIAL_DELAY_S
+            int "Initial distress delay (seconds)"
+            range 0 3600
+            default 120
+
+        config DISTRESS_REPEAT_INTERVAL_S
+            int "Distress repeat interval (seconds)"
+            range 10 86400
+            default 60
+
+        config PRESENCE_SUSTAIN_S
+            int "LD2412 presence sustain time (seconds)"
+            range 1 300
+            default 5
+
+        config PRESENCE_SUSTAIN_ARMED_EXISTING_S
+            int "LD2412 sustain when target already present at arming (seconds)"
+            range 1 600
+            default 12
+            help
+                If the radar target was already true when the bus entered ARMED
+                (e.g. residual driver signature), require this longer sustain
+                before raising distress. Helps reject the driver's residual
+                presence while still catching a stationary child. Set to the
+                same as PRESENCE_SUSTAIN_S to disable the extended gate.
+
+        config PRESENCE_TARGET_DROP_DEBOUNCE_MS
+            int "LD2412 target drop debounce (ms)"
+            range 0 10000
+            default 1000
+            help
+                How long has_target must read false before clearing the
+                sustain timer. Real LD2412 frames can briefly report 0 during
+                a still/moving handoff; without this debounce the radar
+                re-triggers from a flicker.
+
+        config PRESENCE_STILL_DISTANCE_MAX_CM
+            int "LD2412 still-target max distance for trigger (cm)"
+            range 1 9999
+            default 200
+            help
+                Gate the LD2412 trigger on still_distance being within this
+                range (a child seat is typically <1.5m from the radar). Set to
+                a large value (e.g. 9999) to disable the distance gate.
+
+        config PRESENCE_STILL_ENERGY_MIN
+            int "LD2412 still-target min energy for trigger"
+            range 0 100
+            default 0
+            help
+                Minimum still_energy for the radar to be considered a real
+                occupant. 0 disables the energy gate.
+    endmenu
+
+    menu "Bus State"
+        choice IGNITION_SOURCE
+            prompt "Ignition source"
+            default IGNITION_SOURCE_ESPNOW
+            help
+                How ignition/accessory state is detected. The ESP-NOW source
+                uses a dumb ignition-powered remote ESP32 that broadcasts
+                heartbeats; silence for ESPNOW_HEARTBEAT_TIMEOUT_MS means
+                ignition off. The GPIO source reads a physical sense input
+                (legacy, requires protected automotive input circuit on the
+                configured GPIO).
+
+            config IGNITION_SOURCE_ESPNOW
+                bool "ESP-NOW heartbeat remote (default)"
+            config IGNITION_SOURCE_GPIO
+                bool "GPIO sense input (legacy)"
+        endchoice
+
+        config IGNITION_GPIO
+            int "Ignition/accessory sense GPIO"
+            range 0 48
+            default 4
+            depends on IGNITION_SOURCE_GPIO
+
+        config IGNITION_ACTIVE_LEVEL
+            int "Ignition active GPIO level"
+            range 0 1
+            default 1
+            depends on IGNITION_SOURCE_GPIO
+
+        config EXIT_GRACE_SECONDS
+            int "Exit grace after ignition off (seconds)"
+            range 0 3600
+            default 120
+
+        config IGNITION_DEBOUNCE_MS
+            int "Ignition debounce time (ms)"
+            range 0 10000
+            default 500
+            depends on IGNITION_SOURCE_GPIO
+
+        config ESPNOW_SECRET
+            string "ESP-NOW ignition secret"
+            default "change-me-ignition-secret"
+            depends on IGNITION_SOURCE_ESPNOW
+            help
+                Shared secret hashed at build time (FNV-1a) to a 32-bit magic
+                that prefixes every heartbeat. Both the main and the remote
+                must be compiled with the same value. Change this to avoid
+                cross-talk between adjacent buses running the same firmware.
+
+        config ESPNOW_HEARTBEAT_INTERVAL_MS
+            int "Remote heartbeat interval (ms)"
+            range 100 60000
+            default 2000
+            depends on IGNITION_SOURCE_ESPNOW
+            help
+                How often the remote broadcasts. Used only by ignition_remote
+                firmware; the main reads this for its status reporting.
+
+        config ESPNOW_HEARTBEAT_TIMEOUT_MS
+            int "Heartbeat timeout (ms)"
+            range 1000 300000
+            default 10000
+            depends on IGNITION_SOURCE_ESPNOW
+            help
+                Ignition is declared OFF when no heartbeat has arrived for
+                this long. At 2 s interval, 10 s ~= 5 missed frames.
+
+        config ESPNOW_BOOT_GRACE_S
+            int "Boot grace (s)"
+            range 0 300
+            default 30
+            depends on IGNITION_SOURCE_ESPNOW
+            help
+                At boot, ignition is assumed ON for this many seconds to give
+                the remote time to boot and broadcast. After grace expires
+                with no heartbeat, ignition is declared OFF (fail-closed).
+    endmenu
+
+    menu "BLE Beacon"
+        config BLE_SCAN_INTERVAL_MS
+            int "BLE scan interval (ms)"
+            range 10 10240
+            default 100
+
+        config BLE_SCAN_WINDOW_MS
+            int "BLE scan window (ms)"
+            range 10 10240
+            default 100
+
+        config BLE_BEACON_NEAR_SUSTAIN_S
+            int "Beacon near sustain time (seconds)"
+            range 0 300
+            default 2
+
+        config BLE_BEACON_ABSENT_TIMEOUT_S
+            int "Beacon absent timeout (seconds)"
+            range 1 3600
+            default 10
+
+        config BLE_BEACON_FAR_HYSTERESIS_DB
+            int "Beacon far hysteresis (dB below threshold)"
+            range 0 60
+            default 10
+
+        config BLE_BEACON_MIN_NEAR_RSSI
+            int "Minimum RSSI for beacon to be near (dBm)"
+            range -127 0
+            default -70
+            help
+                Hard floor for "inside bus" proximity. The effective near
+                threshold is max(per-beacon rssi_threshold, this value), so a
+                roster entry set too permissively (for example -75 dBm) cannot
+                make a distant beacon count as near unless the signal reaches
+                at least this value. Use a less negative value (for example
+                -65) for a shorter range.
+    endmenu
+
+    menu "CO2 Tracking"
+        config CO2_RISE_THRESHOLD_PPM
+            int "CO2 rise threshold (ppm)"
+            range 1 5000
+            default 100
+
+        config CO2_WINDOW_READINGS
+            int "CO2 window size (number of readings)"
+            range 2 120
+            default 7
+
+        config CO2_REQUIRE_DELTA_3MIN_RISING
+            bool "Gate trigger on 3-minute delta also rising"
+            default y
+            help
+                Require that the 3-minute rolling delta is also positive
+                when the since-armed delta crosses the threshold. SCD4x
+                low-power readings have +/-50 ppm noise; gating on both
+                signals reduces false positives from sensor noise.
+    endmenu
+
+endmenu

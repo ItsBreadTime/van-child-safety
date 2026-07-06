@@ -1,0 +1,4 @@
+timestamp,topic,payload
+2026-07-03T23:42:24+0700,bus/command/result,"{""request_id"":""ch4-invalid-disarm-01"",""action"":""disarm"",""ok"":false,""status"":""rejected"",""reason"":""cabin_clear_confirmation_required"",""source"":""chapter4_simulated_test"",""state"":""active"",""ignition_on"":true}"
+2026-07-03T23:42:33+0700,bus/command/result,"{""request_id"":""ch4-invalid-disarm-02"",""action"":""disarm"",""ok"":false,""status"":""rejected"",""reason"":""cabin_clear_confirmation_required"",""source"":""chapter4_simulated_test"",""state"":""active"",""ignition_on"":true}"
+2026-07-03T23:42:43+0700,bus/command/result,"{""request_id"":""ch4-invalid-disarm-03"",""action"":""disarm"",""ok"":false,""status"":""rejected"",""reason"":""cabin_clear_confirmation_required"",""source"":""chapter4_simulated_test"",""state"":""active"",""ignition_on"":true}"

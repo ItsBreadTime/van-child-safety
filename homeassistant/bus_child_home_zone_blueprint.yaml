@@ -1,0 +1,91 @@
+# Van Child Safety - Per-child home zone automation Blueprint
+#
+# Install: copy this file to /config/blueprints/automation/bus_child_home_zone.yaml
+# (create the directory if it doesn't exist), then reload automations.
+#
+# To use: Settings -> Automations -> Add Automation -> Use Blueprint -> "Bus Example Home Zone".
+# Pick the child's home zone entity; the Blueprint publishes the normalized
+# zone_enter / zone_leave MQTT events the relay consumes.
+#
+# One Blueprint instance per child - no more copy/paste/edit of automation YAML.
+
+blueprint:
+  name: Bus Example Home Zone
+  description: >
+    Publishes normalized `bus/ha/location/event` MQTT events when the bus phone
+    tracker enters or leaves a child's home zone. The Discord relay consumes
+    these events to send "reached home" notifications and "may have missed
+    home drop-off" warnings.
+  domain: automation
+  input:
+    bus_tracker:
+      name: Bus Location Entity
+      description: The device tracker Home Assistant should treat as the bus location.
+      default: person.bus_tracker
+      selector:
+        entity:
+    home_zone:
+      name: Example Home Zone
+      description: The HA zone entity for this child's home (e.g. zone.example_home).
+      selector:
+        entity:
+          domain: zone
+    child_name:
+      name: Child Display Name
+      description: Human-readable name used in MQTT zone_name (e.g. "Example Home").
+      default: Example Home
+      selector:
+        text:
+
+variables:
+  home_zone: !input home_zone
+  child_name: !input child_name
+
+trigger:
+  - platform: zone
+    entity_id: !input bus_tracker
+    zone: !input home_zone
+    event: enter
+    id: enter
+  - platform: zone
+    entity_id: !input bus_tracker
+    zone: !input home_zone
+    event: leave
+    id: leave
+
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: enter
+        sequence:
+          - service: mqtt.publish
+            data:
+              topic: bus/ha/location/event
+              qos: 1
+              payload: >-
+                {
+                  "event":"zone_enter",
+                  "zone_entity":"{{ home_zone }}",
+                  "zone_name":"{{ child_name }}",
+                  "source":"home_assistant",
+                  "timestamp":"{{ utcnow().strftime('%Y-%m-%dT%H:%M:%SZ') }}"
+                }
+      - conditions:
+          - condition: trigger
+            id: leave
+        sequence:
+          - service: mqtt.publish
+            data:
+              topic: bus/ha/location/event
+              qos: 1
+              payload: >-
+                {
+                  "event":"zone_leave",
+                  "zone_entity":"{{ home_zone }}",
+                  "zone_name":"{{ child_name }}",
+                  "source":"home_assistant",
+                  "timestamp":"{{ utcnow().strftime('%Y-%m-%dT%H:%M:%SZ') }}"
+                }
+
+mode: single

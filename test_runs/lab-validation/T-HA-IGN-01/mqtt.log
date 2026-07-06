@@ -1,0 +1,7 @@
+# capture_started_at=2026-07-04T19:18:02.798+07:00
+2026-07-04T19:18:02+0700 bus/distress/state 
+2026-07-04T19:18:02+0700 bus/event {"event":"distress_clear","state":"active","timestamp":"2026-07-04T12:18:03Z"}
+2026-07-04T19:18:03+0700 bus/state {"state":"armed","ignition_on":false,"armed":true,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"overridden","ignition_espnow":{"last_heartbeat_age_s":0.934927,"remote_uptime_s":25984,"remote_battery_mv":0,"seq":12992,"missed_seq":4221},"timestamp":"2026-07-04T12:18:03Z"}
+2026-07-04T19:18:03+0700 bus/event {"event":"armed","state":"armed","timestamp":"2026-07-04T12:18:03Z"}
+2026-07-04T19:18:03+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"overridden","ignition_espnow":{"last_heartbeat_age_s":1.035878,"remote_uptime_s":25984,"remote_battery_mv":0,"seq":12992,"missed_seq":4221},"timestamp":"2026-07-04T12:18:03Z"}
+# capture_stopped_at=2026-07-04T19:18:20.813+07:00

@@ -1,0 +1,6 @@
+stop_requested_at=2026-07-05T13:35:10+0700
+scenario_dir=<local-path>
+terminating mqtt_collector pid=<pid>
+force_terminating mqtt_collector pid=<pid>
+test_runs/field-validation/T-REAL-VAN-ROUTE-01/relay_after.jsonl
+measurements=36 co2=36 rssi=182 events=39

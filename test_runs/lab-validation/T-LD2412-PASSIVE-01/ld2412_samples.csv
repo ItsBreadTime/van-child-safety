@@ -1,0 +1,8 @@
+stamp,phase,ld2412_target,ld2412_moving,ld2412_still,moving_distance,still_distance,moving_energy,still_energy,ld2412_light,bus_state,ignition_on,bus_armed
+2026-07-04T13:10:27+0700,away,True,False,True,0,105,0,96,0,active,True,False
+2026-07-04T13:10:57+0700,away,True,False,True,0,400,0,80,0,active,True,False
+2026-07-04T13:11:27+0700,away,True,False,True,0,104,0,66,0,active,True,False
+2026-07-04T13:11:57+0700,away,True,False,True,0,105,0,71,0,active,True,False
+2026-07-04T13:12:27+0700,away,True,False,True,0,103,0,100,0,active,True,False
+2026-07-04T13:12:57+0700,away,True,False,True,0,400,0,95,0,active,True,False
+2026-07-04T13:13:27+0700,away,True,False,True,0,102,0,100,0,active,True,False

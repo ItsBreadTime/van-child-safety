@@ -1,0 +1,10 @@
+timestamp,topic,id,state,rssi,rssi_threshold
+2026-07-03T23:49:49+0700,bus/beacon/config/state,config,,,
+2026-07-03T23:49:49+0700,bus/beacon/crystal/state,crystal,near,-50,-75
+2026-07-03T23:49:49+0700,bus/beacon/bread/state,bread,near,-75,-75
+2026-07-03T23:49:51+0700,bus/telemetry,crystal,near,-50,-75
+2026-07-03T23:49:51+0700,bus/telemetry,bread,near,-73,-75
+2026-07-03T23:50:21+0700,bus/telemetry,crystal,near,-52,-75
+2026-07-03T23:50:21+0700,bus/telemetry,bread,near,-69,-75
+2026-07-03T23:50:51+0700,bus/telemetry,crystal,near,-53,-75
+2026-07-03T23:50:51+0700,bus/telemetry,bread,near,-76,-75

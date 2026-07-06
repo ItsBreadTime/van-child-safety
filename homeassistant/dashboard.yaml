@@ -1,0 +1,596 @@
+# =============================================================================
+# Van Child Safety Lovelace dashboard template.
+#
+# Setup: Settings -> Dashboards -> Add Dashboard -> raw config editor -> paste
+# everything from `views:` below.
+#
+# Entity IDs vary by Home Assistant MQTT discovery history. The template uses
+# `bus_sensor_*` examples; adjust these to your own entities before use.
+#
+# Required HACS frontends (HACS -> Frontend):
+#   - Mushroom           - status/action cards
+#   - auto-entities      - per-child beacon state list
+#   - mini-graph-card    - CO2 trend
+#   - timer-bar-card    - exit-grace countdown
+# Optional but recommended:
+#   - The package yaml (bus_project_package.yaml) must be installed so these
+#     entities exist: sensor.bus_distress_detail, sensor.bus_state_detail,
+#     sensor.bus_relay_*, sensor.bus_roster, sensor.bus_command_result,
+#     and the scripts used by the Disarm / Roster views.
+# =============================================================================
+
+views:
+  - title: Bus Overview
+    path: bus_overview
+    icon: mdi:bus
+    cards:
+      # --- Headline status ----------------------------------------------
+      - type: grid
+        title: Operator Snapshot
+        columns: 2
+        square: false
+        cards:
+          - type: custom:mushroom-template-card
+            entity: sensor.bus_sensor_bus_state
+            icon: mdi:state-machine
+            primary: "{{ states(entity) | replace('_', ' ') | title }}"
+            secondary: >-
+              Ignition {{ states('binary_sensor.bus_sensor_ignition') }} ·
+              Armed {{ states('binary_sensor.bus_sensor_armed') }}
+            color: >-
+              {% set state = states(entity) %}
+              {% if state in ['distress_pending', 'distress_active'] %}
+                red
+              {% elif state in ['armed', 'exit_grace'] %}
+                orange
+              {% elif state == 'active' %}
+                green
+              {% elif state == 'disarmed' %}
+                blue
+              {% else %}
+                grey
+              {% endif %}
+            multiline_secondary: true
+            tap_action:
+              action: more-info
+          - type: custom:mushroom-template-card
+            entity: sensor.bus_sensor_distress
+            icon: mdi:bell-alert
+            primary: >-
+              {% if states(entity) in ['clear', 'unknown', 'unavailable'] %}
+                No active distress
+              {% else %}
+                Distress: {{ states(entity) }}
+              {% endif %}
+            secondary: >-
+              {% if states(entity) in ['clear', 'unknown', 'unavailable'] %}
+                Clear
+              {% else %}
+                {{ state_attr('sensor.bus_distress_detail', 'trigger') | default('No trigger') }}
+              {% endif %}
+            color: >-
+              {% if states(entity) in ['clear', 'unknown', 'unavailable'] %}
+                green
+              {% else %}
+                red
+              {% endif %}
+            tap_action:
+              action: more-info
+          - type: custom:mushroom-template-card
+            entity: sensor.bus_sensor_co2
+            icon: mdi:molecule-co2
+            primary: "CO2 {{ states(entity) }} ppm"
+            secondary: >-
+              Delta {{ states('sensor.bus_sensor_co2_delta_since_armed') }} ppm ·
+              baseline {{ states('sensor.bus_sensor_co2_armed_baseline') }} ppm
+            color: >-
+              {% set co2 = states(entity) | int(0) %}
+              {% if co2 >= 1200 %}
+                red
+              {% elif co2 >= 900 %}
+                orange
+              {% else %}
+                green
+              {% endif %}
+            multiline_secondary: true
+            tap_action:
+              action: more-info
+          - type: custom:mushroom-template-card
+            entity: binary_sensor.bus_sensor_presence
+            icon: mdi:radar
+            primary: >-
+              mmWave {{ states(entity) }}
+            secondary: >-
+              Still {{ states('binary_sensor.bus_sensor_still_target') }} ·
+              moving {{ states('binary_sensor.bus_sensor_moving_target') }}
+            color: >-
+              {% if is_state(entity, 'on') %}
+                orange
+              {% else %}
+                green
+              {% endif %}
+            multiline_secondary: true
+            tap_action:
+              action: more-info
+          - type: custom:mushroom-template-card
+            entity: sensor.bus_relay_status
+            icon: mdi:discord
+            primary: "Relay {{ states(entity) }}"
+            secondary: >-
+              Commands {{ state_attr(entity, 'operator_commands_enabled') | default(false) }} ·
+              v{{ state_attr(entity, 'version') | default('unknown') }}
+            color: >-
+              {% if states(entity) == 'online' %}
+                green
+              {% elif states(entity) == 'degraded' %}
+                orange
+              {% else %}
+                red
+              {% endif %}
+            multiline_secondary: true
+            tap_action:
+              action: more-info
+          - type: custom:mushroom-template-card
+            entity: sensor.bus_roster
+            icon: mdi:account-child
+            primary: >-
+              {{ states(entity) }} registered child{{ '' if states(entity) == '1' else 'ren' }}
+            secondary: >-
+              Updated {{ state_attr(entity, 'timestamp') | default('unknown') }}
+            color: >-
+              {% if states(entity) | int(0) > 0 %}
+                blue
+              {% else %}
+                grey
+              {% endif %}
+            multiline_secondary: true
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/bus_roster
+
+      - type: entities
+        title: Detailed Bus Status
+        show_header_toggle: false
+        entities:
+          - binary_sensor.bus_sensor_ignition
+          - binary_sensor.bus_sensor_armed
+          - sensor.bus_sensor_co2
+          - sensor.bus_sensor_co2_delta_since_armed
+          - binary_sensor.bus_sensor_presence
+          - binary_sensor.bus_sensor_gps_valid
+          - sensor.bus_sensor_wifi_rssi
+
+      # --- Exit-grace countdown (only when state == exit_grace) ---------
+      - type: conditional
+        conditions:
+          - entity: sensor.bus_sensor_bus_state
+            state: exit_grace
+        card:
+          type: custom:timer-bar-card
+          name: Exit Grace Countdown
+          entity: sensor.bus_sensor_bus_state
+          filter_in_state:
+            - exit_grace
+
+      # --- Active distress (only when state != clear) --------------------
+      # Reads attributes from sensor.bus_distress_detail (package-provided
+      # MQTT sensor with json_attributes_topic). If the package is not
+      # installed, every field shows 'n/a' instead of erroring.
+      - type: conditional
+        conditions:
+          - entity: sensor.bus_sensor_distress
+            state_not: clear
+        card:
+          type: markdown
+          title: Active Distress
+          content: >-
+            {% set person = state_attr('sensor.bus_distress_detail', 'person') or {} %}
+            {% set evidence = state_attr('sensor.bus_distress_detail', 'evidence') or {} %}
+            {% set bus_tracker = states.person.bus_tracker %}
+            **State:** {{ states('sensor.bus_sensor_distress') }}
+
+            **Trigger:** {{ state_attr('sensor.bus_distress_detail', 'trigger') | default('n/a') }}
+
+            **Detail:** {{ state_attr('sensor.bus_distress_detail', 'detail') | default('n/a') }}
+
+            **Child:** {{ person.person_name | default(person.id | default('unknown')) }}
+
+            **CO2:** {{ evidence.co2 | default('n/a') }} ppm
+            (baseline {{ evidence.co2_baseline | default('n/a') }} ppm,
+            delta {{ evidence.co2_delta_since_armed | default('n/a') }} ppm)
+
+            **mmWave:** target={{ evidence.ld2412_target | default('n/a') }},
+            moving={{ evidence.ld2412_moving | default('n/a') }},
+            still={{ evidence.ld2412_still | default('n/a') }}
+
+            **Beacon:** {{ evidence.beacon_state | default('n/a') }}
+            (rssi {{ evidence.rssi | default('n/a') }})
+
+            **Location:** {{ states('person.bus_tracker') }}
+            - {{ state_attr('person.bus_tracker', 'latitude') | default('n/a') }},
+            {{ state_attr('person.bus_tracker', 'longitude') | default('n/a') }}
+
+            **Time:** {{ state_attr('sensor.bus_distress_detail', 'timestamp') | default('n/a') }}
+
+      - type: entity
+        name: Active Distress
+        entity: sensor.bus_sensor_distress
+        icon: mdi:bell-alert
+
+      # --- Distress controls (firmware-discovered buttons) --------------
+      - type: entities
+        title: Safety Actions
+        show_header_toggle: false
+        entities:
+          - type: section
+            label: Distress
+          - type: buttons
+            entities:
+              - entity: button.bus_sensor_acknowledge_distress
+                name: Acknowledge
+                icon: mdi:bell-check
+              - entity: button.bus_sensor_clear_distress
+                name: Clear
+                icon: mdi:bell-cancel
+              - entity: button.bus_sensor_test_distress
+                name: Test
+                icon: mdi:bell-plus
+          - type: section
+            label: Disarm readiness
+          - entity: input_boolean.bus_cabin_clear_confirmed
+            name: Cabin physically checked clear
+            icon: mdi:clipboard-check-outline
+          - sensor.bus_command_result
+
+      # --- Safe disarm flow (requires physical cabin check) -------------
+      - type: vertical-stack
+        title: Disarm Bus
+        cards:
+          - type: markdown
+            content: >-
+              Physically check every seat first. The confirmation expires after
+              2 minutes and is consumed by the disarm command.
+
+              **Current state:** {{ states('sensor.bus_sensor_bus_state') }}
+
+              **Last command:** {{ states('sensor.bus_command_result') }}
+          - type: custom:mushroom-template-card
+            primary: Disarm Bus
+            secondary: >-
+              Cabin checked: {{ states('input_boolean.bus_cabin_clear_confirmed') }} ·
+              state {{ states('sensor.bus_sensor_bus_state') }}
+            icon: mdi:shield-off
+            color: >-
+              {% if is_state('input_boolean.bus_cabin_clear_confirmed', 'on') %}
+                orange
+              {% else %}
+                disabled
+              {% endif %}
+            multiline_secondary: true
+            tap_action:
+              action: perform-action
+              perform_action: script.bus_disarm
+              confirmation:
+                text: Confirm the cabin has been physically checked and is empty.
+            hold_action:
+              action: none
+
+      # --- Bus Empty override -------------------------------------------
+      - type: entity
+        name: Bus Empty override
+        entity: switch.bus_sensor_bus_empty
+        icon: mdi:bus-multiple
+
+      # --- CO2 trend ----------------------------------------------------
+      - type: custom:mini-graph-card
+        name: CO2 Trend (1h)
+        entities:
+          - entity: sensor.bus_sensor_co2
+            name: CO2
+          - entity: sensor.bus_sensor_co2_armed_baseline
+            name: Baseline
+        hours_to_show: 1
+        points_per_hour: 12
+        line_color: "#e74c3c"
+        lower_bound: 0
+
+      # --- Map ----------------------------------------------------------
+      - type: map
+        entities:
+          - person.bus_tracker
+        hours_to_show: 24
+        theme_mode: auto
+
+      # --- Discord relay health -----------------------------------------
+      - type: entities
+        title: Discord Relay
+        show_header_toggle: false
+        entities:
+          - sensor.bus_relay_status
+          - type: attribute
+            entity: sensor.bus_relay_status
+            attribute: version
+            name: Relay version
+          - type: attribute
+            entity: sensor.bus_relay_status
+            attribute: operator_commands_enabled
+            name: Discord commands
+          - type: attribute
+            entity: sensor.bus_relay_status
+            attribute: roster_loaded
+            name: Roster loaded
+          - type: attribute
+            entity: sensor.bus_relay_status
+            attribute: active_distress_id
+            name: Active distress id
+          - type: section
+            label: Last delivery
+          - sensor.bus_relay_last_event
+          - sensor.bus_relay_error
+
+      # --- Beacon roster config -----------------------------------------
+      - type: entities
+        title: Beacon Config
+        show_header_toggle: false
+        entities:
+          - sensor.bus_sensor_beacon_config_result
+          - sensor.bus_roster
+          - sensor.bus_command_result
+
+      # --- Per-child beacon state (auto) --------------------------------
+      # Actual entity_ids: sensor.bus_sensor_beacon_<name> (no _state suffix)
+      # and sensor.bus_sensor_beacon_<name>_rssi. Include all, exclude rssi.
+      - type: custom:auto-entities
+        filter:
+          include:
+            - entity_id: sensor.bus_sensor_beacon_*
+          exclude:
+            - entity_id: sensor.bus_sensor_beacon_*_rssi
+            - entity_id: sensor.bus_sensor_beacon_config_result
+        sort:
+          method: name
+        card:
+          type: entities
+          title: Per-Child Beacon State
+          show_header_toggle: false
+
+  - title: Sensors
+    path: bus_sensors
+    icon: mdi:radar
+    cards:
+      - type: entities
+        title: Environment
+        show_header_toggle: false
+        entities:
+          - sensor.bus_sensor_temperature
+          - sensor.bus_sensor_humidity
+          - sensor.bus_sensor_co2
+          - sensor.bus_sensor_co2_armed_baseline
+          - sensor.bus_sensor_co2_delta_since_armed
+          - sensor.bus_sensor_co2_delta_3min
+
+      - type: entities
+        title: mmWave (LD2412)
+        show_header_toggle: false
+        entities:
+          - binary_sensor.bus_sensor_presence
+          - binary_sensor.bus_sensor_moving_target
+          - binary_sensor.bus_sensor_still_target
+          - sensor.bus_sensor_still_distance
+          - sensor.bus_sensor_still_energy
+          - sensor.bus_sensor_moving_distance
+          - sensor.bus_sensor_move_energy
+          - sensor.bus_sensor_detection_distance
+          - sensor.bus_sensor_light
+
+      - type: entities
+        title: GPS
+        show_header_toggle: false
+        entities:
+          - binary_sensor.bus_sensor_gps_valid
+          - sensor.bus_sensor_latitude
+          - sensor.bus_sensor_longitude
+          - sensor.bus_sensor_speed
+          - sensor.bus_sensor_course
+          - sensor.bus_sensor_satellites
+          - sensor.bus_sensor_altitude
+
+      - type: entities
+        title: Connectivity
+        show_header_toggle: false
+        entities:
+          - sensor.bus_sensor_wifi_rssi
+
+      - type: custom:mini-graph-card
+        name: CO2 / Baseline (1h)
+        entities:
+          - entity: sensor.bus_sensor_co2
+            name: CO2
+          - entity: sensor.bus_sensor_co2_armed_baseline
+            name: Baseline
+        hours_to_show: 1
+        points_per_hour: 12
+        line_color: "#e74c3c"
+        lower_bound: 0
+
+  - title: Roster
+    path: bus_roster
+    icon: mdi:account-multiple
+    cards:
+      # --- Live roster table (from sensor.bus_roster attributes) -------
+      # Firmware publishes full roster as JSON attributes on bus/beacon/config/state.
+      - type: markdown
+        title: Roster workflow
+        content: >-
+          **Selected:** {{ states('input_select.bus_beacon_selector') }}
+
+          **Beacon ID field:** `{{ states('input_text.bus_beacon_id') }}`
+
+          **Last firmware result:** {{ states('sensor.bus_sensor_beacon_config_result') }}
+
+          **Roster freshness:** {{ state_attr('sensor.bus_roster', 'timestamp') | default('unknown') }}
+
+          Use **Refresh** before editing if the roster looks stale. Use
+          **Deactivate** through the Active toggle when you want to stop alerts
+          without deleting the child record.
+
+      - type: markdown
+        title: Registered children
+        content: >-
+          {% set rosters = state_attr('sensor.bus_roster', 'beacons')
+             if state_attr('sensor.bus_roster', 'beacons') is iterable
+             else [] %}
+          {% if rosters | length == 0 %}
+
+          **No roster records are currently loaded in Home Assistant.** Tap
+          **Refresh list** to request a fresh roster from the firmware. If
+          live per-child sensors appear below, those may be retained entities
+          from an older roster and should be reconciled.
+
+          {% set beacons = states.sensor
+             | selectattr('entity_id','match','^sensor\.bus_sensor_beacon_')
+             | rejectattr('entity_id','match','_rssi$')
+             | rejectattr('entity_id','eq','sensor.bus_sensor_beacon_config_result')
+             | list %}
+          {% if beacons | length > 0 %}
+          ### Per-child beacon sensors detected (firmware knows about these)
+          | Child sensor | State |
+          |---|---|
+          {% for e in beacons %}
+          | `{{ e.entity_id }}` | {{ e.state }} |
+          {% endfor %}
+          {% endif %}
+
+          {% else %}
+
+          | Child | ID | State | RSSI | Active | Discord ch | Home zone | Notes |
+          |---|---|---|---|---|---|---|---|
+          {% for b in rosters %}
+          | {{ b.person_name | default(b.id) }} | `{{ b.id }}` | {{ b.state | default('?') }} | {{ b.rssi | default('?') }} dBm | {% if b.active %}yes{% else %}no{% endif %} | {{ b.discord_channel_id | default('-') }} | {{ b.home_zone_entity | default('-') }} | {{ b.notes | default('-') }} |
+          {% endfor %}
+
+          **Total:** {{ states('sensor.bus_roster') | default('0') }} children.
+          {% endif %}
+
+          **Last op result:** {{ states('sensor.bus_sensor_beacon_config_result') }}
+
+          **Roster timestamp:** {{ state_attr('sensor.bus_roster', 'timestamp') | default('unknown') }}
+
+          **HA entity updated:** {{ relative_time(states.sensor.bus_roster.last_updated) if states.sensor.bus_roster is defined else 'unknown' }} ago.
+
+      # --- Action buttons (refresh + add/update/remove) ----------------
+      - type: grid
+        title: Roster actions
+        columns: 2
+        square: false
+        cards:
+          - type: custom:mushroom-template-card
+            primary: Refresh
+            secondary: Request the current firmware roster
+            icon: mdi:refresh
+            color: blue
+            tap_action:
+              action: perform-action
+              perform_action: script.bus_list_person_beacons
+            hold_action:
+              action: none
+          - type: custom:mushroom-template-card
+            primary: Add
+            secondary: Create a child/iBeacon record
+            icon: mdi:account-plus
+            color: green
+            tap_action:
+              action: perform-action
+              perform_action: script.bus_add_person_beacon
+            hold_action:
+              action: none
+          - type: custom:mushroom-template-card
+            primary: Update
+            secondary: Save metadata and active state
+            icon: mdi:account-edit
+            color: orange
+            tap_action:
+              action: perform-action
+              perform_action: script.bus_update_person_beacon
+            hold_action:
+              action: none
+          - type: custom:mushroom-template-card
+            primary: Remove
+            secondary: Delete selected roster record
+            icon: mdi:account-remove
+            color: red
+            tap_action:
+              action: perform-action
+              perform_action: script.bus_remove_person_beacon
+              confirmation:
+                text: Remove the selected child beacon from the firmware roster?
+            hold_action:
+              action: none
+
+      # --- Identity (required for Add + Update) -------------------------
+      - type: entities
+        title: Child Identity
+        show_header_toggle: false
+        entities:
+          - input_select.bus_beacon_selector
+          - input_text.bus_beacon_id
+          - input_text.bus_person_name
+          - input_boolean.bus_person_active
+
+      # --- iBeacon identity (required for Add, ignored on Update) -------
+      - type: entities
+        title: iBeacon Identity
+        show_header_toggle: false
+        entities:
+          - input_text.bus_ibeacon_uuid
+          - input_number.bus_ibeacon_major
+          - input_number.bus_ibeacon_minor
+          - input_number.bus_beacon_rssi
+
+      # --- Notifications (optional) -------------------------------------
+      - type: entities
+        title: Routing and Notes
+        show_header_toggle: false
+        entities:
+          - input_text.bus_discord_channel_id
+          - input_text.bus_home_zone_entity
+          - input_text.bus_person_notes
+
+      # --- Helper text ---------------------------------------------------
+      - type: markdown
+        title: Operation rules
+        content: >-
+          - Pick an existing child from the dropdown to fill the Beacon ID, or
+            choose "(new — type ID below)" and type a new ID.
+
+          - **Add** requires Beacon ID (`A-Za-z0-9_-`, 1-31 chars), iBeacon
+            UUID, Major, Minor, and RSSI threshold.
+
+          - **Update** changes metadata only. UUID, Major, and Minor are
+            immutable; remove and re-add to change the physical beacon identity.
+
+          - **Remove** deletes by Beacon ID only. Use Active off if this is a
+            temporary pause.
+
+          - Beacon ID lookup is case-insensitive: `testtag` matches `TestTag`.
+
+          - Major `0` and Minor `0` are valid only when the physical tag
+            advertises `0/0`.
+
+          Watch **Beacon Config Result** for `ok: true/false` after each
+          operation.
+
+      # --- Per-child state sensors (auto) -------------------------------
+      - type: custom:auto-entities
+        filter:
+          include:
+            - entity_id: sensor.bus_sensor_beacon_*
+          exclude:
+            - entity_id: sensor.bus_sensor_beacon_*_rssi
+            - entity_id: sensor.bus_sensor_beacon_config_result
+        sort:
+          method: name
+        card:
+          type: entities
+          title: Per-child live state (from firmware)
+          show_header_toggle: false

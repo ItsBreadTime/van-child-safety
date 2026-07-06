@@ -1,0 +1,16 @@
+{
+  "rounds_sent": 10,
+  "rounds_result_received": 10,
+  "all_rejected_as_expected": true,
+  "state_values": [
+    "active"
+  ],
+  "ignition_on_values": [
+    "True"
+  ],
+  "latency_ms_min": 35.63979199680034,
+  "latency_ms_max": 310.4875830031233,
+  "latency_ms_mean": 72.37287079915404,
+  "latency_ms_median": 45.26414549764013,
+  "latency_ms_p95_inclusive": 65.40091600618325
+}

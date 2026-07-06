@@ -1,0 +1,11 @@
+request_id,latency_ms,publish_wall_time,result_wall_time,ok,status,reason,state,ignition_on
+ch4-invalid-latency-01,45.224457993754186,2026-07-03T23:57:32.665+0700,2026-07-03T23:57:32.710+0700,False,rejected,cabin_clear_confirmation_required,active,True
+ch4-invalid-latency-02,35.63979199680034,2026-07-03T23:57:33.169+0700,2026-07-03T23:57:33.204+0700,False,rejected,cabin_clear_confirmation_required,active,True
+ch4-invalid-latency-03,37.61324999504723,2026-07-03T23:57:33.671+0700,2026-07-03T23:57:33.708+0700,False,rejected,cabin_clear_confirmation_required,active,True
+ch4-invalid-latency-04,36.8314169900259,2026-07-03T23:57:34.176+0700,2026-07-03T23:57:34.213+0700,False,rejected,cabin_clear_confirmation_required,active,True
+ch4-invalid-latency-05,38.07637499994598,2026-07-03T23:57:34.680+0700,2026-07-03T23:57:34.718+0700,False,rejected,cabin_clear_confirmation_required,active,True
+ch4-invalid-latency-06,45.30383300152607,2026-07-03T23:57:35.186+0700,2026-07-03T23:57:35.231+0700,False,rejected,cabin_clear_confirmation_required,active,True
+ch4-invalid-latency-07,51.74049999914132,2026-07-03T23:57:35.691+0700,2026-07-03T23:57:35.743+0700,False,rejected,cabin_clear_confirmation_required,active,True
+ch4-invalid-latency-08,57.41058400599286,2026-07-03T23:57:36.197+0700,2026-07-03T23:57:36.254+0700,False,rejected,cabin_clear_confirmation_required,active,True
+ch4-invalid-latency-09,65.40091600618325,2026-07-03T23:57:36.702+0700,2026-07-03T23:57:36.767+0700,False,rejected,cabin_clear_confirmation_required,active,True
+ch4-invalid-latency-10,310.4875830031233,2026-07-03T23:57:37.204+0700,2026-07-03T23:57:37.515+0700,False,rejected,cabin_clear_confirmation_required,active,True

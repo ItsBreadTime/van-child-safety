@@ -1,0 +1,3 @@
+2026-07-05T13:11:35+0700 heartbeat mqtt_pid=<pid> caffeinate_pid=<pid>
+2026-07-05T13:12:26+0700 heartbeat mqtt_pid=<pid> watchdog_pid=missing caffeinate_pid=<pid>
+2026-07-05T13:13:39+0700 heartbeat mqtt_pid=<pid> supervisor_pid=<pid> caffeinate_pid=<pid>

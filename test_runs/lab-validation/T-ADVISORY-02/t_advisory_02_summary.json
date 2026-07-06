@@ -1,0 +1,52 @@
+{
+  "scenario": "T-ADVISORY-02",
+  "rerun_at": "2026-07-04T19:20:08.277+07:00",
+  "published_event": {
+    "event": "sensor_fault",
+    "sensor": "ld2412",
+    "detail": "chapter4_rerun_sensor_fault_advisory",
+    "duration_s": 124,
+    "source": "chapter4_automated_test_rerun",
+    "timestamp": "2026-07-04T12:20:08Z"
+  },
+  "event_seen": true,
+  "sensor_fault_last_event": {
+    "channel_id": "000000000000000000",
+    "emergency": false,
+    "content": "Warning: a critical bus sensor (LD2412 or SCD4x) is reporting a persistent fault. Safety detection is degraded - one of the three child-in-van signals may be unavailable.",
+    "embed_titles": [
+      "Sensor fault"
+    ],
+    "timestamp": "2026-07-04T12:19:08Z"
+  },
+  "last_event": {
+    "channel_id": "000000000000000000",
+    "emergency": false,
+    "content": "Warning: a critical bus sensor (LD2412 or SCD4x) is reporting a persistent fault. Safety detection is degraded - one of the three child-in-van signals may be unavailable.",
+    "embed_titles": [
+      "Sensor fault"
+    ],
+    "timestamp": "2026-07-04T12:19:08Z"
+  },
+  "relay_error": {
+    "status": "clear",
+    "message": "clear",
+    "timestamp": "2026-07-04T12:19:08Z"
+  },
+  "relay_status": {
+    "status": "online",
+    "mqtt_connected": true,
+    "discord_connected": true,
+    "firmware_online": true,
+    "roster_loaded": true,
+    "roster_count": 2,
+    "bus_state": "active",
+    "active_distress_id": null,
+    "operator_commands_enabled": false,
+    "operator_gateway_ready": false,
+    "version": "0.5.1",
+    "timestamp": "2026-07-04T12:19:08Z"
+  },
+  "scope": "Simulated MQTT sensor_fault advisory; does not prove firmware detects a disconnected/faulted sensor.",
+  "result": "pass"
+}

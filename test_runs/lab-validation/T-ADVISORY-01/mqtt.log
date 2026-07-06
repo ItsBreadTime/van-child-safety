@@ -1,0 +1,31 @@
+# capture_started_at=2026-07-04T19:18:03.514+07:00
+2026-07-04T19:18:03+0700 bus/distress/state 
+2026-07-04T19:18:03+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-04T12:18:03Z"}
+2026-07-04T19:18:03+0700 bus/distress/state 
+2026-07-04T19:18:03+0700 bus/event {"event":"distress_clear","state":"active","timestamp":"2026-07-04T12:18:03Z"}
+2026-07-04T19:18:03+0700 bus/distress/state 
+2026-07-04T19:18:03+0700 bus/event {"event":"distress_clear","state":"active","timestamp":"2026-07-04T12:18:03Z"}
+2026-07-04T19:18:06+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-69,"timestamp":"2026-07-04T12:18:06Z","person_name":"Bread","rssi_threshold":-75,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-04T19:18:06+0700 bus/state {"state":"armed","ignition_on":false,"armed":true,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"overridden","ignition_espnow":{"last_heartbeat_age_s":0.076075,"remote_uptime_s":25988,"remote_battery_mv":0,"seq":12994,"missed_seq":4222},"timestamp":"2026-07-04T12:18:06Z"}
+2026-07-04T19:18:06+0700 bus/event {"event":"armed","state":"armed","timestamp":"2026-07-04T12:18:06Z"}
+2026-07-04T19:18:06+0700 bus/state {"state":"distress_pending","ignition_on":false,"armed":true,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"overridden","ignition_espnow":{"last_heartbeat_age_s":0.084741,"remote_uptime_s":25988,"remote_battery_mv":0,"seq":12994,"missed_seq":4222},"timestamp":"2026-07-04T12:18:06Z"}
+2026-07-04T19:18:06+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Bread entered the bus.","embed_titles":["Child entered bus"],"timestamp":"2026-07-04T12:18:06Z"}
+2026-07-04T19:18:06+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-04T12:18:06Z"}
+2026-07-04T19:18:06+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":2,"bus_state":"distress_pending","active_distress_id":null,"operator_commands_enabled":false,"operator_gateway_ready":false,"version":"0.5.1","timestamp":"2026-07-04T12:18:06Z"}
+2026-07-04T19:18:18+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"absent","rssi":0,"timestamp":"2026-07-04T12:18:18Z","person_name":"Bread","rssi_threshold":-75,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":11}
+2026-07-04T19:18:18+0700 bus/event {"event":"beacon_silent_while_armed","beacon_id":"bread","timestamp":"2026-07-04T12:18:18Z"}
+2026-07-04T19:18:18+0700 bus/distress/state 
+2026-07-04T19:18:18+0700 bus/state {"state":"armed","ignition_on":false,"armed":true,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"overridden","ignition_espnow":{"last_heartbeat_age_s":0.092281,"remote_uptime_s":26000,"remote_battery_mv":0,"seq":13000,"missed_seq":4225},"timestamp":"2026-07-04T12:18:18Z"}
+2026-07-04T19:18:18+0700 bus/event {"event":"armed","state":"armed","timestamp":"2026-07-04T12:18:18Z"}
+2026-07-04T19:18:18+0700 bus/event {"event":"distress_clear","state":"armed","timestamp":"2026-07-04T12:18:18Z"}
+2026-07-04T19:18:18+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Advisory: Bread's beacon (bread) went silent while the bus is armed. Either the child exited, or the beacon battery died. CO2 and mmWave are still active.","embed_titles":["Beacon silent while armed"],"timestamp":"2026-07-04T12:18:19Z"}
+2026-07-04T19:18:18+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-04T12:18:19Z"}
+2026-07-04T19:18:18+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":2,"bus_state":"armed","active_distress_id":null,"operator_commands_enabled":false,"operator_gateway_ready":false,"version":"0.5.1","timestamp":"2026-07-04T12:18:19Z"}
+2026-07-04T19:18:18+0700 bus/distress/state 
+2026-07-04T19:18:19+0700 bus/event {"event":"distress_clear","state":"armed","timestamp":"2026-07-04T12:18:19Z"}
+2026-07-04T19:18:19+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"overridden","ignition_espnow":{"last_heartbeat_age_s":1.081469,"remote_uptime_s":26000,"remote_battery_mv":0,"seq":13000,"missed_seq":4225},"timestamp":"2026-07-04T12:18:19Z"}
+2026-07-04T19:18:19+0700 bus/distress/state 
+2026-07-04T19:18:19+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-04T12:18:19Z"}
+2026-07-04T19:18:20+0700 bus/distress/state 
+2026-07-04T19:18:20+0700 bus/event {"event":"distress_clear","state":"active","timestamp":"2026-07-04T12:18:20Z"}
+# capture_stopped_at=2026-07-04T19:18:20.813+07:00

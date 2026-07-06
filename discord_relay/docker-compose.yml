@@ -1,0 +1,13 @@
+services:
+  bus-discord-relay:
+    build: .
+    container_name: bus-discord-relay
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/data
+    ports:
+      # Prometheus /metrics + Docker HEALTHCHECK endpoint. Omit the ports
+      # mapping if you don't scrape from outside the Docker network.
+      - "9101:9101"

@@ -1,0 +1,85 @@
+{
+  "scenario": "T-BLE-01",
+  "created_at": "2026-07-04T12:11:26.382+07:00",
+  "precheck": {
+    "state": "active",
+    "ignition_on": true,
+    "armed": false,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "stale",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "ok",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 0.30501,
+      "remote_uptime_s": 28,
+      "remote_battery_mv": 0,
+      "seq": 14,
+      "missed_seq": 3
+    },
+    "timestamp": "2026-07-04T05:05:27Z"
+  },
+  "steps": [],
+  "result": "pass",
+  "bread_near_before_arming": true,
+  "armed_seen": true,
+  "pending_seen": true,
+  "distress_active_seen": true,
+  "distress_payload": {
+    "id": "distress-20260704-051124",
+    "severity": "emergency",
+    "state": "active",
+    "bus_state": "distress_active",
+    "trigger": "beacon_near",
+    "detail": "crystal",
+    "person": {
+      "id": "crystal",
+      "person_name": "Crystal",
+      "discord_channel_id": "000000000000000000",
+      "home_zone_entity": "zone.example_home"
+    },
+    "timestamp": "2026-07-04T05:11:24Z",
+    "evidence": {
+      "co2": 537,
+      "co2_baseline": 533,
+      "co2_delta_since_armed": 4,
+      "co2_consecutive_rise_count": 0,
+      "ld2412_target": true,
+      "ld2412_moving": false,
+      "ld2412_still": true,
+      "moving_distance": 0,
+      "still_distance": 111,
+      "moving_energy": 0,
+      "still_energy": 100,
+      "ld2412_target_duration_s": 375.3261,
+      "ld2412_frame_age_s": 0.00908,
+      "beacon_state": "near",
+      "rssi": -55
+    },
+    "gps": {
+      "valid": false,
+      "latitude": 0,
+      "longitude": 0
+    }
+  },
+  "relay_emergency": {
+    "channel_id": "000000000000000000",
+    "emergency": true,
+    "content": "@everyone EMERGENCY: possible child left in bus - Crystal (`crystal`). Trigger: Beacon near.",
+    "embed_titles": [
+      "Emergency: possible child left in bus"
+    ],
+    "timestamp": "2026-07-04T05:11:25Z"
+  },
+  "bus_empty_on_iso": "2026-07-04T12:09:24.200+07:00",
+  "beacon_start_iso": "2026-07-04T12:09:21.696+07:00",
+  "restore": {
+    "bus_empty_off_iso": "2026-07-04T12:11:25.008+07:00",
+    "restored_active_clear": true,
+    "distress_retained_clear": true
+  }
+}

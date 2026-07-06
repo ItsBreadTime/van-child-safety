@@ -1,0 +1,6 @@
+## 2026-07-04T12:09:24.200+07:00 publish bus/command 'bus_empty_on'
+## ended_at=2026-07-04T12:09:24.227+07:00 exit_code=0 duration_ms=<id>.8
+
+## 2026-07-04T12:11:25.008+07:00 publish bus/command 'bus_empty_off'
+## ended_at=2026-07-04T12:11:25.072+07:00 exit_code=0 duration_ms=<id>.2
+

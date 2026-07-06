@@ -1,0 +1,1806 @@
+# mqtt_capture_started_at=2026-07-05T13:11:35+0700 host=192.0.2.10 port=1883 topic=bus/#
+# mqtt_connected_at=2026-07-05T13:11:35+0700 reason=Success
+# mqtt_subscribed_at=2026-07-05T13:11:35+0700 topic=bus/#
+2026-07-05T13:11:35+0700 bus/status online
+2026-07-05T13:11:35+0700 bus/beacon/config/set {"action":"list"}
+2026-07-05T13:11:35+0700 bus/beacon/config/state {"version":1,"max_records":20,"count":3,"timestamp":"2026-07-05T05:44:48Z","records":[{"id":"crystal","name":"crystal","person_name":"Crystal","active":true,"state":"far","rssi":-72,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"bread","name":"bread","person_name":"Bread","active":true,"state":"near","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"butter","name":"butter","person_name":"Butter","active":true,"state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}}],"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","active":true,"state":"far","rssi":-72,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"bread","name":"bread","person_name":"Bread","active":true,"state":"near","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"butter","name":"butter","person_name":"Butter","active":true,"state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}}]}
+2026-07-05T13:11:35+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"absent","rssi":0,"timestamp":"2026-07-05T06:03:09Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":11}
+2026-07-05T13:11:35+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-68,"timestamp":"2026-07-05T06:11:00Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:11:35+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-84,"timestamp":"2026-07-05T06:03:01Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:11:35+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:03:09Z"}
+2026-07-05T13:11:35+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Crystal exited at school.","embed_titles":["Child exited at school"],"timestamp":"2026-07-05T06:03:09Z"}
+2026-07-05T13:11:35+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:03:09Z"}
+2026-07-05T13:11:35+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.244626,"remote_uptime_s":2795,"remote_battery_mv":0,"seq":1237,"missed_seq":181},"timestamp":"2026-07-05T06:09:54Z"}
+2026-07-05T13:11:35+0700 bus/location/state gps
+2026-07-05T13:11:35+0700 bus/location/attributes {"latitude":0,"longitude":0,"speed":0,"course":0,"gps_valid":true}
+2026-07-05T13:11:35+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:11:31Z"
+}
+2026-07-05T13:11:35+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-83,"timestamp":"2026-07-05T06:11:35Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:11:37+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:11:37Z"
+}
+# mqtt_capture_started_at=2026-07-05T13:12:27+0700 host=192.0.2.10 port=1883 topic=bus/#
+# mqtt_connected_at=2026-07-05T13:12:27+0700 reason=Success
+# mqtt_subscribed_at=2026-07-05T13:12:27+0700 topic=bus/#
+2026-07-05T13:12:27+0700 bus/status online
+2026-07-05T13:12:27+0700 bus/beacon/config/set {"action":"list"}
+2026-07-05T13:12:27+0700 bus/beacon/config/state {"version":1,"max_records":20,"count":3,"timestamp":"2026-07-05T05:44:48Z","records":[{"id":"crystal","name":"crystal","person_name":"Crystal","active":true,"state":"far","rssi":-72,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"bread","name":"bread","person_name":"Bread","active":true,"state":"near","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"butter","name":"butter","person_name":"Butter","active":true,"state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}}],"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","active":true,"state":"far","rssi":-72,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"bread","name":"bread","person_name":"Bread","active":true,"state":"near","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"butter","name":"butter","person_name":"Butter","active":true,"state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}}]}
+2026-07-05T13:12:27+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"absent","rssi":0,"timestamp":"2026-07-05T06:03:09Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":11}
+2026-07-05T13:12:27+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-70,"timestamp":"2026-07-05T06:11:42Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:12:27+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-84,"timestamp":"2026-07-05T06:03:01Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:12:27+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:03:09Z"}
+2026-07-05T13:12:27+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Crystal exited at school.","embed_titles":["Child exited at school"],"timestamp":"2026-07-05T06:03:09Z"}
+2026-07-05T13:12:27+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:03:09Z"}
+2026-07-05T13:12:27+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.244626,"remote_uptime_s":2795,"remote_battery_mv":0,"seq":1237,"missed_seq":181},"timestamp":"2026-07-05T06:09:54Z"}
+2026-07-05T13:12:27+0700 bus/location/state gps
+2026-07-05T13:12:27+0700 bus/location/attributes {"latitude":0,"longitude":0,"speed":0,"course":0,"gps_valid":true}
+2026-07-05T13:12:27+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:12:27Z"
+}
+2026-07-05T13:12:31+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:12:31Z"
+}
+# mqtt_capture_started_at=2026-07-05T13:13:39+0700 host=192.0.2.10 port=1883 topic=bus/#
+# mqtt_connected_at=2026-07-05T13:13:40+0700 reason=Success
+# mqtt_subscribed_at=2026-07-05T13:13:40+0700 topic=bus/#
+2026-07-05T13:13:40+0700 bus/status online
+2026-07-05T13:13:40+0700 bus/beacon/config/set {"action":"list"}
+2026-07-05T13:13:40+0700 bus/beacon/config/state {"version":1,"max_records":20,"count":3,"timestamp":"2026-07-05T05:44:48Z","records":[{"id":"crystal","name":"crystal","person_name":"Crystal","active":true,"state":"far","rssi":-72,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"bread","name":"bread","person_name":"Bread","active":true,"state":"near","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"butter","name":"butter","person_name":"Butter","active":true,"state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}}],"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","active":true,"state":"far","rssi":-72,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"bread","name":"bread","person_name":"Bread","active":true,"state":"near","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"butter","name":"butter","person_name":"Butter","active":true,"state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}}]}
+2026-07-05T13:13:40+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"absent","rssi":0,"timestamp":"2026-07-05T06:03:09Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":11}
+2026-07-05T13:13:40+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-87,"timestamp":"2026-07-05T06:13:19Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:13:40+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-84,"timestamp":"2026-07-05T06:03:01Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:13:40+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:03:09Z"}
+2026-07-05T13:13:40+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Crystal exited at school.","embed_titles":["Child exited at school"],"timestamp":"2026-07-05T06:03:09Z"}
+2026-07-05T13:13:40+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:03:09Z"}
+2026-07-05T13:13:40+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.156622,"remote_uptime_s":2990,"remote_battery_mv":0,"seq":1323,"missed_seq":202},"timestamp":"2026-07-05T06:13:08Z"}
+2026-07-05T13:13:40+0700 bus/location/state gps
+2026-07-05T13:13:40+0700 bus/location/attributes {"latitude":0,"longitude":0,"speed":0,"course":0,"gps_valid":true}
+2026-07-05T13:13:40+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:13:37Z"
+}
+2026-07-05T13:13:40+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.08571,"remote_uptime_s":3012,"remote_battery_mv":0,"seq":1333,"missed_seq":202},"timestamp":"2026-07-05T06:13:40Z"}
+2026-07-05T13:13:41+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:13:40Z"}
+2026-07-05T13:13:42+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:13:42Z"
+}
+2026-07-05T13:13:44+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.013565,"remote_uptime_s":3026,"remote_battery_mv":0,"seq":1339,"missed_seq":207},"timestamp":"2026-07-05T06:13:44Z"}
+2026-07-05T13:13:44+0700 bus/distress/state 
+2026-07-05T13:13:44+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:13:44Z"}
+2026-07-05T13:13:44+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:13:44Z"
+}
+2026-07-05T13:13:47+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:13:47Z"
+}
+2026-07-05T13:13:47+0700 bus/telemetry {"temperature":31.09,"humidity":72.9,"co2":640,"co2_baseline":0,"co2_delta_since_armed":640,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":101,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-96,"wifi_rssi":-44,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-75,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-79,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:13:51+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:13:51Z"
+}
+2026-07-05T13:13:57+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:13:57Z"
+}
+2026-07-05T13:14:02+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:02Z"
+}
+2026-07-05T13:14:04+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:04Z"
+}
+2026-07-05T13:14:07+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:07Z"
+}
+2026-07-05T13:14:11+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:11Z"
+}
+2026-07-05T13:14:17+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:17Z"
+}
+2026-07-05T13:14:17+0700 bus/telemetry {"temperature":31.16,"humidity":72.9,"co2":606,"co2_baseline":0,"co2_delta_since_armed":606,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-127,"wifi_rssi":-45,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-79,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-78,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:14:22+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:22Z"
+}
+2026-07-05T13:14:23+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"near","rssi":-66,"timestamp":"2026-07-05T06:14:23Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:14:24+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:24Z"
+}
+2026-07-05T13:14:27+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:27Z"
+}
+2026-07-05T13:14:27+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-85,"timestamp":"2026-07-05T06:14:27Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:14:30+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-67,"timestamp":"2026-07-05T06:14:30Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:14:31+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:31Z"
+}
+2026-07-05T13:14:37+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:37Z"
+}
+2026-07-05T13:14:37+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-81,"timestamp":"2026-07-05T06:14:37Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:14:40+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"near","rssi":-64,"timestamp":"2026-07-05T06:14:40Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:14:42+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:42Z"
+}
+2026-07-05T13:14:42+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-90,"timestamp":"2026-07-05T06:14:42Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:14:44+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:44Z"
+}
+2026-07-05T13:14:47+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:47Z"
+}
+2026-07-05T13:14:47+0700 bus/telemetry {"temperature":31.08,"humidity":74,"co2":591,"co2_baseline":0,"co2_delta_since_armed":591,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-117,"wifi_rssi":-58,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-76,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-59,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:14:51+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:51Z"
+}
+2026-07-05T13:14:52+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-67,"timestamp":"2026-07-05T06:14:52Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:14:53+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-81,"timestamp":"2026-07-05T06:14:53Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:14:57+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:14:57Z"
+}
+2026-07-05T13:15:02+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:15:02Z"
+}
+2026-07-05T13:15:02+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"far","rssi":-93,"timestamp":"2026-07-05T06:15:02Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:15:03+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"near","rssi":-68,"timestamp":"2026-07-05T06:15:03Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:15:04+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:15:04Z"
+}
+2026-07-05T13:15:07+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:15:07Z"
+}
+2026-07-05T13:15:11+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:15:11Z"
+}
+2026-07-05T13:15:11+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-61,"timestamp":"2026-07-05T06:15:11Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:15:17+0700 bus/telemetry {"temperature":31.6,"humidity":72.9,"co2":2549,"co2_baseline":0,"co2_delta_since_armed":2549,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":101,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":1896,"wifi_rssi":-49,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"far","rssi":-67,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"near","rssi":-65,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"near","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:15:17+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-83,"timestamp":"2026-07-05T06:15:17Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:15:18+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.174896,"remote_uptime_s":3110,"remote_battery_mv":0,"seq":1376,"missed_seq":215},"timestamp":"2026-07-05T06:15:18Z"}
+2026-07-05T13:15:18+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:15:18Z"}
+2026-07-05T13:15:18+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-84,"timestamp":"2026-07-05T06:15:18Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:15:23+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.106235,"remote_uptime_s":3125,"remote_battery_mv":0,"seq":1383,"missed_seq":221},"timestamp":"2026-07-05T06:15:23Z"}
+2026-07-05T13:15:23+0700 bus/distress/state 
+2026-07-05T13:15:24+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:15:23Z"}
+2026-07-05T13:15:25+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-69,"timestamp":"2026-07-05T06:15:25Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:15:28+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"near","rssi":-68,"timestamp":"2026-07-05T06:15:28Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:15:29+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Crystal entered the bus.","embed_titles":["Child entered bus"],"timestamp":"2026-07-05T06:15:29Z"}
+2026-07-05T13:15:29+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:15:29Z"}
+2026-07-05T13:15:29+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:15:29Z"}
+2026-07-05T13:15:32+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:15:32Z"
+}
+2026-07-05T13:15:37+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:15:37Z"
+}
+2026-07-05T13:15:38+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-84,"timestamp":"2026-07-05T06:15:38Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:15:42+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:15:42Z"
+}
+2026-07-05T13:15:47+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:15:47Z"
+}
+2026-07-05T13:15:47+0700 bus/telemetry {"temperature":30.25,"humidity":45.2,"co2":1947,"co2_baseline":0,"co2_delta_since_armed":1947,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":115,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":1296,"wifi_rssi":-66,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-70,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-87,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-73,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:15:49+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.0517,"remote_uptime_s":3141,"remote_battery_mv":0,"seq":1390,"missed_seq":221},"timestamp":"2026-07-05T06:15:49Z"}
+2026-07-05T13:15:49+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:15:49Z"}
+2026-07-05T13:15:51+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.238958,"remote_uptime_s":3152,"remote_battery_mv":0,"seq":1395,"missed_seq":225},"timestamp":"2026-07-05T06:15:51Z"}
+2026-07-05T13:15:51+0700 bus/distress/state 
+2026-07-05T13:15:51+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:15:51Z"}
+2026-07-05T13:15:52+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:15:52Z"
+}
+2026-07-05T13:15:57+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:15:57Z"
+}
+2026-07-05T13:16:02+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:16:03Z"
+}
+2026-07-05T13:16:07+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:16:07Z"
+}
+2026-07-05T13:16:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:16:13Z"
+}
+2026-07-05T13:16:17+0700 bus/telemetry {"temperature":29.36,"humidity":42.5,"co2":1575,"co2_baseline":0,"co2_delta_since_armed":1575,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":103,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":927,"wifi_rssi":-76,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-65,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-77,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-86,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:16:18+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:16:18Z"
+}
+2026-07-05T13:16:23+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:16:23Z"
+}
+2026-07-05T13:16:23+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.168495,"remote_uptime_s":3175,"remote_battery_mv":0,"seq":1405,"missed_seq":225},"timestamp":"2026-07-05T06:16:23Z"}
+2026-07-05T13:16:23+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:16:23Z"}
+2026-07-05T13:16:24+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.106758,"remote_uptime_s":3186,"remote_battery_mv":0,"seq":1410,"missed_seq":229},"timestamp":"2026-07-05T06:16:24Z"}
+2026-07-05T13:16:25+0700 bus/distress/state 
+2026-07-05T13:16:25+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:16:24Z"}
+2026-07-05T13:16:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:16:28Z"
+}
+2026-07-05T13:16:38+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:16:38Z"
+}
+2026-07-05T13:16:43+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:16:43Z"
+}
+2026-07-05T13:16:48+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:16:48Z"
+}
+2026-07-05T13:16:51+0700 bus/telemetry {"temperature":28.83,"humidity":42.1,"co2":1581,"co2_baseline":0,"co2_delta_since_armed":1581,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":108,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":941,"wifi_rssi":-64,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-71,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-84,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-88,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:16:51+0700 bus/telemetry {"temperature":28.83,"humidity":42.1,"co2":1581,"co2_baseline":0,"co2_delta_since_armed":1581,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":108,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":941,"wifi_rssi":-64,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-71,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-84,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-88,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:16:52+0700 bus/telemetry {"temperature":28.83,"humidity":42.1,"co2":1581,"co2_baseline":0,"co2_delta_since_armed":1581,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":108,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":941,"wifi_rssi":-64,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-71,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-84,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-88,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:16:52+0700 bus/telemetry {"temperature":28.83,"humidity":42.1,"co2":1581,"co2_baseline":0,"co2_delta_since_armed":1581,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":108,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":941,"wifi_rssi":-64,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-71,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-84,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-88,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:16:58+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:16:58Z"
+}
+2026-07-05T13:17:03+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:03Z"
+}
+2026-07-05T13:17:08+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:08Z"
+}
+2026-07-05T13:17:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:13Z"
+}
+2026-07-05T13:17:17+0700 bus/telemetry {"temperature":28.25,"humidity":41.9,"co2":1766,"co2_baseline":0,"co2_delta_since_armed":1766,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":103,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":1160,"wifi_rssi":-58,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-70,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-78,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-71,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:17:18+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:18Z"
+}
+2026-07-05T13:17:23+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:23Z"
+}
+2026-07-05T13:17:23+0700 bus/ha/location/event {
+  "event":"zone_leave",
+  "zone_entity":"zone.example_home",
+  "zone_name":"School",
+  "source":"home_assistant",
+  "timestamp":"2026-07-05T06:17:23Z"
+}
+2026-07-05T13:17:23+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Warning: bus left school while these children still appear near: Crystal.","embed_titles":["Bus left school with children still near"],"timestamp":"2026-07-05T06:17:23Z"}
+2026-07-05T13:17:23+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:17:23Z"}
+2026-07-05T13:17:23+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:17:23Z"}
+2026-07-05T13:17:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:28Z"
+}
+2026-07-05T13:17:33+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:33Z"
+}
+2026-07-05T13:17:38+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:38Z"
+}
+2026-07-05T13:17:43+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:43Z"
+}
+2026-07-05T13:17:47+0700 bus/telemetry {"temperature":27.73,"humidity":43.6,"co2":2045,"co2_baseline":0,"co2_delta_since_armed":2045,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":1454,"wifi_rssi":-64,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-66,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-77,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-73,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:17:48+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:48Z"
+}
+2026-07-05T13:17:53+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:53Z"
+}
+2026-07-05T13:17:58+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:17:58Z"
+}
+2026-07-05T13:18:08+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:18:08Z"
+}
+2026-07-05T13:18:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:18:13Z"
+}
+2026-07-05T13:18:17+0700 bus/telemetry {"temperature":27.44,"humidity":43.8,"co2":2219,"co2_baseline":0,"co2_delta_since_armed":2219,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-330,"wifi_rssi":-60,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-77,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-98,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-74,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:18:20+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"far","rssi":-85,"timestamp":"2026-07-05T06:18:20Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:18:23+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:18:23Z"
+}
+2026-07-05T13:18:24+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"absent","rssi":0,"timestamp":"2026-07-05T06:18:24Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":10}
+2026-07-05T13:18:25+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Bread exited the bus.","embed_titles":["Child exited bus"],"timestamp":"2026-07-05T06:18:25Z"}
+2026-07-05T13:18:25+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:18:25Z"}
+2026-07-05T13:18:25+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:18:25Z"}
+2026-07-05T13:18:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:18:28Z"
+}
+2026-07-05T13:18:32+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"near","rssi":-69,"timestamp":"2026-07-05T06:18:32Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:18:33+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:18:33Z"
+}
+2026-07-05T13:18:38+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:18:38Z"
+}
+2026-07-05T13:18:43+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:18:43Z"
+}
+2026-07-05T13:18:43+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"far","rssi":-81,"timestamp":"2026-07-05T06:18:43Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:18:47+0700 bus/telemetry {"temperature":27.39,"humidity":48.4,"co2":2219,"co2_baseline":0,"co2_delta_since_armed":2219,"ld2412_target":true,"ld2412_moving":true,"ld2412_still":true,"moving_distance":200,"still_distance":110,"moving_energy":60,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":272,"wifi_rssi":-66,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"far","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"absent","rssi":-98,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-70,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:18:48+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:18:48Z"
+}
+2026-07-05T13:18:49+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"near","rssi":-67,"timestamp":"2026-07-05T06:18:49Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:18:53+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:18:53Z"
+}
+2026-07-05T13:18:58+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:18:58Z"
+}
+2026-07-05T13:19:08+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Butter",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:19:08Z"
+}
+2026-07-05T13:19:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Butter",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:19:13Z"
+}
+2026-07-05T13:19:17+0700 bus/telemetry {"temperature":27.18,"humidity":48.4,"co2":2220,"co2_baseline":0,"co2_delta_since_armed":2220,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":645,"wifi_rssi":-63,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"absent","rssi":-98,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-98,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:19:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Butter",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:19:28Z"
+}
+2026-07-05T13:19:33+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Butter",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:19:33Z"
+}
+2026-07-05T13:19:38+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:19:38Z"
+}
+2026-07-05T13:19:40+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"absent","rssi":0,"timestamp":"2026-07-05T06:19:40Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":14}
+2026-07-05T13:19:41+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Butter exited the bus.","embed_titles":["Child exited bus"],"timestamp":"2026-07-05T06:19:41Z"}
+2026-07-05T13:19:41+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:19:41Z"}
+2026-07-05T13:19:41+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:19:41Z"}
+2026-07-05T13:19:43+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:19:43Z"
+}
+2026-07-05T13:19:47+0700 bus/telemetry {"temperature":26.83,"humidity":49.2,"co2":2236,"co2_baseline":0,"co2_delta_since_armed":2236,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":655,"wifi_rssi":-53,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-72,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"absent","rssi":-98,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"absent","rssi":-99,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:19:48+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:19:48Z"
+}
+2026-07-05T13:19:53+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:19:53Z"
+}
+2026-07-05T13:19:58+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:19:58Z"
+}
+2026-07-05T13:20:03+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:20:03Z"
+}
+2026-07-05T13:20:08+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:20:08Z"
+}
+2026-07-05T13:20:11+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.081015,"remote_uptime_s":3403,"remote_battery_mv":0,"seq":1506,"missed_seq":247},"timestamp":"2026-07-05T06:20:11Z"}
+2026-07-05T13:20:12+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:20:12Z"}
+2026-07-05T13:20:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:20:13Z"
+}
+2026-07-05T13:20:13+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.018931,"remote_uptime_s":3415,"remote_battery_mv":0,"seq":1511,"missed_seq":251},"timestamp":"2026-07-05T06:20:13Z"}
+2026-07-05T13:20:13+0700 bus/distress/state 
+2026-07-05T13:20:13+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:20:13Z"}
+2026-07-05T13:20:17+0700 bus/telemetry {"temperature":26.69,"humidity":48.6,"co2":2271,"co2_baseline":0,"co2_delta_since_armed":2271,"ld2412_target":true,"ld2412_moving":true,"ld2412_still":true,"moving_distance":200,"still_distance":100,"moving_energy":26,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":505,"wifi_rssi":-54,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-70,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"absent","rssi":-98,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"absent","rssi":-99,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:20:18+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:20:18Z"
+}
+2026-07-05T13:20:23+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Crystal",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:20:23Z"
+}
+2026-07-05T13:20:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Crystal",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:20:28Z"
+}
+2026-07-05T13:20:31+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"far","rssi":-88,"timestamp":"2026-07-05T06:20:31Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:20:43+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Crystal",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:20:43Z"
+}
+2026-07-05T13:20:47+0700 bus/telemetry {"temperature":26.55,"humidity":47.6,"co2":2270,"co2_baseline":0,"co2_delta_since_armed":2270,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":102,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":225,"wifi_rssi":-63,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"far","rssi":-96,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"absent","rssi":-98,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"absent","rssi":-99,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:20:48+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Crystal",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:20:48Z"
+}
+2026-07-05T13:20:51+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"absent","rssi":0,"timestamp":"2026-07-05T06:20:51Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":12}
+2026-07-05T13:20:51+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Crystal reached home.","embed_titles":["Child reached home"],"timestamp":"2026-07-05T06:20:51Z"}
+2026-07-05T13:20:51+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:20:51Z"}
+2026-07-05T13:20:51+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:20:51Z"}
+2026-07-05T13:20:58+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:20:58Z"
+}
+2026-07-05T13:21:03+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:21:03Z"
+}
+2026-07-05T13:21:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:21:13Z"
+}
+2026-07-05T13:21:17+0700 bus/telemetry {"temperature":26.36,"humidity":47.7,"co2":2230,"co2_baseline":0,"co2_delta_since_armed":2230,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":105,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":11,"wifi_rssi":-56,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-96,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"absent","rssi":-98,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"absent","rssi":-99,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:21:18+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:21:18Z"
+}
+2026-07-05T13:21:23+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:21:23Z"
+}
+2026-07-05T13:21:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:21:28Z"
+}
+2026-07-05T13:21:33+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:21:33Z"
+}
+2026-07-05T13:21:33+0700 bus/ha/location/event {
+  "event":"zone_enter",
+  "zone_entity":"zone.example_home",
+  "zone_name":"School",
+  "source":"home_assistant",
+  "timestamp":"2026-07-05T06:21:33Z"
+}
+2026-07-05T13:21:33+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Bus reached school.","embed_titles":["Bus reached school"],"timestamp":"2026-07-05T06:21:33Z"}
+2026-07-05T13:21:33+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:21:33Z"}
+2026-07-05T13:21:33+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:21:33Z"}
+2026-07-05T13:21:38+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:21:38Z"
+}
+2026-07-05T13:21:38+0700 bus/ha/location/event {
+  "event":"zone_leave",
+  "zone_entity":"zone.example_home",
+  "zone_name":"School",
+  "source":"home_assistant",
+  "timestamp":"2026-07-05T06:21:38Z"
+}
+2026-07-05T13:21:47+0700 bus/telemetry {"temperature":26.09,"humidity":47.3,"co2":2155,"co2_baseline":0,"co2_delta_since_armed":2155,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-64,"wifi_rssi":-59,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-96,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"absent","rssi":-98,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"absent","rssi":-99,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:21:48+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:21:48Z"
+}
+2026-07-05T13:21:53+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:21:53Z"
+}
+2026-07-05T13:21:58+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:21:58Z"
+}
+2026-07-05T13:22:03+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:22:03Z"
+}
+2026-07-05T13:22:08+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:22:08Z"
+}
+2026-07-05T13:22:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:22:13Z"
+}
+2026-07-05T13:22:17+0700 bus/telemetry {"temperature":25.99,"humidity":46.6,"co2":2107,"co2_baseline":0,"co2_delta_since_armed":2107,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":101,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-113,"wifi_rssi":-54,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-96,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"absent","rssi":-98,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"absent","rssi":-99,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:22:18+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:22:18Z"
+}
+2026-07-05T13:22:18+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-93,"timestamp":"2026-07-05T06:22:18Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:22:22+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.020642,"remote_uptime_s":3534,"remote_battery_mv":0,"seq":1564,"missed_seq":256},"timestamp":"2026-07-05T06:22:23Z"}
+2026-07-05T13:22:23+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:22:23Z"}
+2026-07-05T13:22:24+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.208884,"remote_uptime_s":3546,"remote_battery_mv":0,"seq":1569,"missed_seq":260},"timestamp":"2026-07-05T06:22:24Z"}
+2026-07-05T13:22:24+0700 bus/distress/state 
+2026-07-05T13:22:24+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:22:24Z"}
+2026-07-05T13:22:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:22:28Z"
+}
+2026-07-05T13:22:38+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:22:38Z"
+}
+2026-07-05T13:22:43+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Bread",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:22:43Z"
+}
+2026-07-05T13:22:47+0700 bus/telemetry {"temperature":25.98,"humidity":50.7,"co2":2108,"co2_baseline":0,"co2_delta_since_armed":2108,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":104,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-128,"wifi_rssi":-53,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-96,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-84,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"absent","rssi":-99,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:22:48+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:22:48Z"
+}
+2026-07-05T13:22:53+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:22:53Z"
+}
+2026-07-05T13:22:58+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:22:58Z"
+}
+2026-07-05T13:23:03+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:03Z"
+}
+2026-07-05T13:23:08+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:08Z"
+}
+2026-07-05T13:23:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:13Z"
+}
+2026-07-05T13:23:17+0700 bus/telemetry {"temperature":26.01,"humidity":50.1,"co2":2109,"co2_baseline":0,"co2_delta_since_armed":2109,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-162,"wifi_rssi":-56,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-96,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-77,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"absent","rssi":-99,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:23:18+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:18Z"
+}
+2026-07-05T13:23:23+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:23Z"
+}
+2026-07-05T13:23:26+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.009039,"remote_uptime_s":3598,"remote_battery_mv":0,"seq":1592,"missed_seq":263},"timestamp":"2026-07-05T06:23:26Z"}
+2026-07-05T13:23:26+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:23:26Z"}
+2026-07-05T13:23:27+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.047462,"remote_uptime_s":3609,"remote_battery_mv":0,"seq":1597,"missed_seq":267},"timestamp":"2026-07-05T06:23:27Z"}
+2026-07-05T13:23:27+0700 bus/distress/state 
+2026-07-05T13:23:27+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:23:27Z"}
+2026-07-05T13:23:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:28Z"
+}
+2026-07-05T13:23:31+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-98,"timestamp":"2026-07-05T06:23:31Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:23:33+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Butter",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:33Z"
+}
+2026-07-05T13:23:34+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-60,"timestamp":"2026-07-05T06:23:34Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:23:35+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Bread entered the bus.","embed_titles":["Child entered bus"],"timestamp":"2026-07-05T06:23:35Z"}
+2026-07-05T13:23:35+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:23:35Z"}
+2026-07-05T13:23:35+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:23:35Z"}
+2026-07-05T13:23:38+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Butter",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:38Z"
+}
+2026-07-05T13:23:43+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Butter",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:43Z"
+}
+2026-07-05T13:23:47+0700 bus/telemetry {"temperature":25.81,"humidity":48.3,"co2":1989,"co2_baseline":0,"co2_delta_since_armed":1989,"ld2412_target":true,"ld2412_moving":true,"ld2412_still":true,"moving_distance":250,"still_distance":100,"moving_energy":36,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-281,"wifi_rssi":-59,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-96,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"near","rssi":-55,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-77,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:23:52+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-81,"timestamp":"2026-07-05T06:23:52Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:23:53+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Butter",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:53Z"
+}
+2026-07-05T13:23:58+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Butter",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:23:58Z"
+}
+2026-07-05T13:24:00+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:01Z"
+}
+2026-07-05T13:24:02+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-64,"timestamp":"2026-07-05T06:24:02Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:24:02+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.106876,"remote_uptime_s":3634,"remote_battery_mv":0,"seq":1608,"missed_seq":267},"timestamp":"2026-07-05T06:24:02Z"}
+2026-07-05T13:24:02+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:24:02Z"}
+2026-07-05T13:24:03+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:03Z"
+}
+2026-07-05T13:24:05+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.059377,"remote_uptime_s":3647,"remote_battery_mv":0,"seq":1614,"missed_seq":272},"timestamp":"2026-07-05T06:24:06Z"}
+2026-07-05T13:24:06+0700 bus/distress/state 
+2026-07-05T13:24:06+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:24:06Z"}
+2026-07-05T13:24:08+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:08Z"
+}
+2026-07-05T13:24:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:13Z"
+}
+2026-07-05T13:24:16+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-90,"timestamp":"2026-07-05T06:24:16Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:24:16+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"near","rssi":-69,"timestamp":"2026-07-05T06:24:16Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:24:17+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Butter entered the bus.","embed_titles":["Child entered bus"],"timestamp":"2026-07-05T06:24:17Z"}
+2026-07-05T13:24:17+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:24:17Z"}
+2026-07-05T13:24:17+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:24:17Z"}
+2026-07-05T13:24:17+0700 bus/telemetry {"temperature":25.73,"humidity":49.6,"co2":1991,"co2_baseline":0,"co2_delta_since_armed":1991,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-239,"wifi_rssi":-59,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-96,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-74,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:24:18+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:18Z"
+}
+2026-07-05T13:24:23+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:23Z"
+}
+2026-07-05T13:24:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:28Z"
+}
+2026-07-05T13:24:33+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:33Z"
+}
+2026-07-05T13:24:33+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-85,"timestamp":"2026-07-05T06:24:33Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:24:38+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:38Z"
+}
+2026-07-05T13:24:43+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Crystal",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:43Z"
+}
+2026-07-05T13:24:44+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"far","rssi":-92,"timestamp":"2026-07-05T06:24:44Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:24:47+0700 bus/telemetry {"temperature":25.7,"humidity":50.4,"co2":1989,"co2_baseline":0,"co2_delta_since_armed":1989,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":101,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-166,"wifi_rssi":-75,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"far","rssi":-97,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-75,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-80,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:24:53+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Crystal",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:24:53Z"
+}
+2026-07-05T13:25:03+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Crystal",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:03Z"
+}
+2026-07-05T13:25:05+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"near","rssi":-69,"timestamp":"2026-07-05T06:25:05Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:25:05+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.103271,"remote_uptime_s":3697,"remote_battery_mv":0,"seq":1636,"missed_seq":276},"timestamp":"2026-07-05T06:25:05Z"}
+2026-07-05T13:25:05+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:25:05Z"}
+2026-07-05T13:25:07+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.041205,"remote_uptime_s":3708,"remote_battery_mv":0,"seq":1641,"missed_seq":280},"timestamp":"2026-07-05T06:25:07Z"}
+2026-07-05T13:25:07+0700 bus/distress/state 
+2026-07-05T13:25:07+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:25:07Z"}
+2026-07-05T13:25:08+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Crystal",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:08Z"
+}
+2026-07-05T13:25:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"Crystal",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:13Z"
+}
+2026-07-05T13:25:17+0700 bus/telemetry {"temperature":25.67,"humidity":52.2,"co2":2040,"co2_baseline":0,"co2_delta_since_armed":2040,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-67,"wifi_rssi":-63,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"far","rssi":-71,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-78,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:25:18+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:18Z"
+}
+2026-07-05T13:25:23+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"near","rssi":-66,"timestamp":"2026-07-05T06:25:23Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:25:23+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Crystal entered the bus.","embed_titles":["Child entered bus"],"timestamp":"2026-07-05T06:25:23Z"}
+2026-07-05T13:25:23+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:25:23Z"}
+2026-07-05T13:25:23+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:25:23Z"}
+2026-07-05T13:25:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:28Z"
+}
+2026-07-05T13:25:28+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-90,"timestamp":"2026-07-05T06:25:28Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:25:33+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:33Z"
+}
+2026-07-05T13:25:38+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:38Z"
+}
+2026-07-05T13:25:42+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"far","rssi":-81,"timestamp":"2026-07-05T06:25:43Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:25:43+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"not_home",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:43Z"
+}
+2026-07-05T13:25:46+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"near","rssi":-64,"timestamp":"2026-07-05T06:25:46Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:25:47+0700 bus/telemetry {"temperature":25.53,"humidity":50.1,"co2":1951,"co2_baseline":0,"co2_delta_since_armed":1951,"ld2412_target":true,"ld2412_moving":true,"ld2412_still":true,"moving_distance":200,"still_distance":100,"moving_energy":44,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-157,"wifi_rssi":-68,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-64,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-79,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-76,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:25:48+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:48Z"
+}
+2026-07-05T13:25:48+0700 bus/ha/location/event {
+  "event":"zone_enter",
+  "zone_entity":"zone.example_home",
+  "zone_name":"School",
+  "source":"home_assistant",
+  "timestamp":"2026-07-05T06:25:48Z"
+}
+2026-07-05T13:25:48+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Bus reached school.","embed_titles":["Bus reached school"],"timestamp":"2026-07-05T06:25:48Z"}
+2026-07-05T13:25:48+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:25:48Z"}
+2026-07-05T13:25:48+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"active","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:25:48Z"}
+2026-07-05T13:25:53+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:53Z"
+}
+2026-07-05T13:25:58+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:25:58Z"
+}
+2026-07-05T13:26:03+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:26:03Z"
+}
+2026-07-05T13:26:08+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:26:08Z"
+}
+2026-07-05T13:26:11+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.081713,"remote_uptime_s":3763,"remote_battery_mv":0,"seq":1665,"missed_seq":287},"timestamp":"2026-07-05T06:26:11Z"}
+2026-07-05T13:26:11+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:26:11Z"}
+2026-07-05T13:26:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:26:13Z"
+}
+2026-07-05T13:26:14+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.02959,"remote_uptime_s":3776,"remote_battery_mv":0,"seq":1671,"missed_seq":292},"timestamp":"2026-07-05T06:26:14Z"}
+2026-07-05T13:26:14+0700 bus/distress/state 
+2026-07-05T13:26:14+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:26:14Z"}
+2026-07-05T13:26:17+0700 bus/telemetry {"temperature":25.61,"humidity":51.2,"co2":1954,"co2_baseline":0,"co2_delta_since_armed":1954,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-155,"wifi_rssi":-72,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-70,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-89,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:26:23+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:26:23Z"
+}
+2026-07-05T13:26:28+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:26:28Z"
+}
+2026-07-05T13:26:33+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:26:33Z"
+}
+2026-07-05T13:26:38+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:26:38Z"
+}
+2026-07-05T13:26:43+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.209398,"remote_uptime_s":3794,"remote_battery_mv":0,"seq":1679,"missed_seq":292},"timestamp":"2026-07-05T06:26:43Z"}
+2026-07-05T13:26:43+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:26:43Z"}
+2026-07-05T13:26:43+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:26:43Z"
+}
+2026-07-05T13:26:47+0700 bus/telemetry {"temperature":25.52,"humidity":49.7,"co2":2158,"co2_baseline":0,"co2_delta_since_armed":2158,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":100,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":169,"wifi_rssi":-77,"bus_empty":false,"ignition_on":false,"bus_armed":false,"bus_state":"exit_grace","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-70,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-73,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-82,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:26:48+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:26:48Z"
+}
+2026-07-05T13:26:48+0700 bus/state {"state":"active","ignition_on":true,"armed":false,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"ok","ignition_espnow":{"last_heartbeat_age_s":0.146057,"remote_uptime_s":3810,"remote_battery_mv":0,"seq":1686,"missed_seq":298},"timestamp":"2026-07-05T06:26:48Z"}
+2026-07-05T13:26:48+0700 bus/distress/state 
+2026-07-05T13:26:48+0700 bus/event {"event":"ignition_on","state":"active","timestamp":"2026-07-05T06:26:48Z"}
+2026-07-05T13:26:58+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:26:58Z"
+}
+2026-07-05T13:27:03+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:27:03Z"
+}
+2026-07-05T13:27:05+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-69,"timestamp":"2026-07-05T06:27:05Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:27:12+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"near","rssi":-61,"timestamp":"2026-07-05T06:27:12Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:27:13+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-85,"timestamp":"2026-07-05T06:27:13Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:27:17+0700 bus/telemetry {"temperature":25.99,"humidity":56.2,"co2":2170,"co2_baseline":0,"co2_delta_since_armed":2170,"ld2412_target":true,"ld2412_moving":true,"ld2412_still":true,"moving_distance":100,"still_distance":100,"moving_energy":60,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":179,"wifi_rssi":-60,"bus_empty":false,"ignition_on":true,"bus_armed":false,"bus_state":"active","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"near","rssi":-65,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-67,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"near","rssi":-66,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:27:18+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-60,"timestamp":"2026-07-05T06:27:18Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:27:18+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-84,"timestamp":"2026-07-05T06:27:18Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:27:19+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-86,"timestamp":"2026-07-05T06:27:19Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:27:21+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-64,"timestamp":"2026-07-05T06:27:21Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:27:21+0700 bus/state {"state":"exit_grace","ignition_on":false,"armed":false,"exit_grace_remaining_s":120,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":10.077203,"remote_uptime_s":3833,"remote_battery_mv":0,"seq":1696,"missed_seq":300},"timestamp":"2026-07-05T06:27:21Z"}
+2026-07-05T13:27:21+0700 bus/event {"event":"ignition_off","state":"exit_grace","timestamp":"2026-07-05T06:27:21Z"}
+2026-07-05T13:27:24+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"far","rssi":-82,"timestamp":"2026-07-05T06:27:24Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:27:41+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:27:41Z"
+}
+2026-07-05T13:27:45+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:27:45Z"
+}
+2026-07-05T13:27:49+0700 bus/telemetry {"temperature":27.01,"humidity":69.6,"co2":2170,"co2_baseline":0,"co2_delta_since_armed":2170,"ld2412_target":true,"ld2412_moving":true,"ld2412_still":true,"moving_distance":200,"still_distance":104,"moving_energy":38,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":179,"wifi_rssi":-80,"bus_empty":false,"ignition_on":false,"bus_armed":false,"bus_state":"exit_grace","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"far","rssi":-92,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"near","rssi":-63,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-97,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:27:49+0700 bus/telemetry {"temperature":27.01,"humidity":69.6,"co2":2170,"co2_baseline":0,"co2_delta_since_armed":2170,"ld2412_target":true,"ld2412_moving":true,"ld2412_still":true,"moving_distance":200,"still_distance":104,"moving_energy":38,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":179,"wifi_rssi":-80,"bus_empty":false,"ignition_on":false,"bus_armed":false,"bus_state":"exit_grace","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"far","rssi":-92,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"near","rssi":-63,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-97,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:27:49+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"absent","rssi":0,"timestamp":"2026-07-05T06:27:49Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":10}
+2026-07-05T13:27:49+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"absent","rssi":0,"timestamp":"2026-07-05T06:27:49Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":13}
+2026-07-05T13:27:50+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Crystal exited at school.","embed_titles":["Child exited at school"],"timestamp":"2026-07-05T06:27:50Z"}
+2026-07-05T13:27:50+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:27:50Z"}
+2026-07-05T13:27:50+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"exit_grace","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:27:50Z"}
+2026-07-05T13:27:50+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Butter exited at school.","embed_titles":["Child exited at school"],"timestamp":"2026-07-05T06:27:50Z"}
+2026-07-05T13:27:50+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:27:50Z"}
+2026-07-05T13:27:50+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"exit_grace","active_distress_id":null,"operator_commands_enabled":true,"operator_gateway_ready":true,"version":"0.5.2","timestamp":"2026-07-05T06:27:50Z"}
+2026-07-05T13:27:53+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-96,"timestamp":"2026-07-05T06:27:53Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:27:55+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"far","rssi":-101,"timestamp":"2026-07-05T06:27:55Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:28:09+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"absent","rssi":0,"timestamp":"2026-07-05T06:28:09Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":14}
+2026-07-05T13:28:16+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"far","rssi":-81,"timestamp":"2026-07-05T06:28:16Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:28:17+0700 bus/telemetry {"temperature":28.19,"humidity":74.1,"co2":2032,"co2_baseline":0,"co2_delta_since_armed":2032,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":101,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":43,"wifi_rssi":-72,"bus_empty":false,"ignition_on":false,"bus_armed":false,"bus_state":"exit_grace","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-101,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"far","rssi":-56,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-95,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:28:19+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-51,"timestamp":"2026-07-05T06:28:18Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:28:20+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:28:20Z"
+}
+2026-07-05T13:28:25+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"absent","rssi":0,"timestamp":"2026-07-05T06:28:24Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":13}
+2026-07-05T13:28:33+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-95,"timestamp":"2026-07-05T06:28:33Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:28:47+0700 bus/telemetry {"temperature":28.76,"humidity":70.2,"co2":1672,"co2_baseline":0,"co2_delta_since_armed":1672,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":109,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-368,"wifi_rssi":-74,"bus_empty":false,"ignition_on":false,"bus_armed":false,"bus_state":"exit_grace","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-101,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"near","rssi":-56,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-99,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:28:49+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"absent","rssi":0,"timestamp":"2026-07-05T06:28:49Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":11}
+2026-07-05T13:28:51+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-95,"timestamp":"2026-07-05T06:28:51Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:29:17+0700 bus/telemetry {"temperature":29.24,"humidity":67.7,"co2":1374,"co2_baseline":0,"co2_delta_since_armed":1374,"ld2412_target":true,"ld2412_moving":false,"ld2412_still":true,"moving_distance":0,"still_distance":104,"moving_energy":0,"still_energy":100,"detection_distance":0,"ld2412_light":0,"latitude":0,"longitude":0,"course":0,"altitude":0,"speed":0,"satellites":0,"gps_valid":false,"co2_delta_3min":-577,"wifi_rssi":-70,"bus_empty":false,"ignition_on":false,"bus_armed":false,"bus_state":"exit_grace","ble_scan_drops":0,"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","state":"absent","rssi":-101,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"bread","name":"bread","person_name":"Bread","state":"near","rssi":-51,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"},{"id":"butter","name":"butter","person_name":"Butter","state":"far","rssi":-96,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home"}]}
+2026-07-05T13:29:21+0700 bus/state {"state":"armed","ignition_on":false,"armed":true,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":130.085914,"remote_uptime_s":3833,"remote_battery_mv":0,"seq":1696,"missed_seq":300},"timestamp":"2026-07-05T06:29:21Z"}
+2026-07-05T13:29:21+0700 bus/event {"event":"armed","state":"distress_pending","timestamp":"2026-07-05T06:29:21Z"}
+2026-07-05T13:29:21+0700 bus/state {"state":"distress_pending","ignition_on":false,"armed":true,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":130.096899,"remote_uptime_s":3833,"remote_battery_mv":0,"seq":1696,"missed_seq":300},"timestamp":"2026-07-05T06:29:21Z"}
+# mqtt_capture_exception_at=2026-07-05T13:30:25+0700 TypeError: make_client.<locals>.on_disconnect() takes from 3 to 4 positional arguments but 5 were given
+# mqtt_capture_exception_at=2026-07-05T13:30:32+0700 TimeoutError: timed out
+# mqtt_capture_exception_at=2026-07-05T13:30:39+0700 TimeoutError: timed out
+# mqtt_connected_at=2026-07-05T13:30:45+0700 reason=Success
+# mqtt_subscribed_at=2026-07-05T13:30:45+0700 topic=bus/#
+2026-07-05T13:30:45+0700 bus/status online
+2026-07-05T13:30:45+0700 bus/beacon/config/set {"action":"list"}
+2026-07-05T13:30:45+0700 bus/beacon/config/state {"version":1,"max_records":20,"count":3,"timestamp":"2026-07-05T05:44:48Z","records":[{"id":"crystal","name":"crystal","person_name":"Crystal","active":true,"state":"far","rssi":-72,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"bread","name":"bread","person_name":"Bread","active":true,"state":"near","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"butter","name":"butter","person_name":"Butter","active":true,"state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}}],"beacons":[{"id":"crystal","name":"crystal","person_name":"Crystal","active":true,"state":"far","rssi":-72,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1003,"minor":2003,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"bread","name":"bread","person_name":"Bread","active":true,"state":"near","rssi":-69,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1001,"minor":2001,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}},{"id":"butter","name":"butter","person_name":"Butter","active":true,"state":"near","rssi":-68,"rssi_threshold":-70,"effective_rssi_threshold":-70,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","notes":"","beacon":{"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"rssi_threshold":-70},"type":"ibeacon","uuid":"00000000-0000-4000-8000-000000000000","major":1002,"minor":2002,"discord":{"channel_id":"000000000000000000"},"home":{"zone_entity":"zone.example_home"}}]}
+2026-07-05T13:30:45+0700 bus/beacon/crystal/state {"id":"crystal","name":"crystal","state":"absent","rssi":0,"timestamp":"2026-07-05T06:28:09Z","person_name":"Crystal","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":14}
+2026-07-05T13:30:45+0700 bus/beacon/bread/state {"id":"bread","name":"bread","state":"near","rssi":-51,"timestamp":"2026-07-05T06:28:18Z","person_name":"Bread","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:30:45+0700 bus/beacon/butter/state {"id":"butter","name":"butter","state":"far","rssi":-95,"timestamp":"2026-07-05T06:28:51Z","person_name":"Butter","rssi_threshold":-70,"effective_rssi_threshold":-70,"active":true,"discord_channel_id":"000000000000000000","home_zone_entity":"zone.example_home","last_seen_age_s":0}
+2026-07-05T13:30:45+0700 bus/relay/discord/status {"status":"online","mqtt_connected":true,"discord_connected":true,"firmware_online":true,"roster_loaded":true,"roster_count":3,"bus_state":"distress_pending","active_distress_id":null,"operator_commands_enabled":false,"operator_gateway_ready":false,"version":"0.5.2","timestamp":"2026-07-05T06:30:19Z"}
+2026-07-05T13:30:45+0700 bus/relay/discord/last_event {"channel_id":"000000000000000000","emergency":false,"content":"Butter exited at school.","embed_titles":["Child exited at school"],"timestamp":"2026-07-05T06:27:50Z"}
+2026-07-05T13:30:45+0700 bus/relay/discord/error {"status":"clear","message":"clear","timestamp":"2026-07-05T06:27:50Z"}
+2026-07-05T13:30:45+0700 bus/state {"state":"distress_pending","ignition_on":false,"armed":true,"exit_grace_remaining_s":0,"distress_active":false,"distress_acknowledged":false,"gps_valid":false,"ble_scan_drops":0,"co2_status":"ok","ld2412_status":"ok","ble_status":"ok","ignition_source":"espnow","ignition_source_status":"stale","ignition_espnow":{"last_heartbeat_age_s":130.096899,"remote_uptime_s":3833,"remote_battery_mv":0,"seq":1696,"missed_seq":300},"timestamp":"2026-07-05T06:29:21Z"}
+2026-07-05T13:30:45+0700 bus/location/state gps
+2026-07-05T13:30:45+0700 bus/location/attributes {"latitude":0,"longitude":0,"speed":0,"course":0,"gps_valid":true}
+2026-07-05T13:30:45+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:28:20Z"
+}
+2026-07-05T13:32:23+0700 bus/status offline
+2026-07-05T13:32:23+0700 bus/relay/discord/status {"status":"degraded","mqtt_connected":true,"discord_connected":true,"firmware_online":false,"roster_loaded":true,"roster_count":3,"bus_state":"distress_pending","active_distress_id":null,"operator_commands_enabled":false,"operator_gateway_ready":false,"version":"0.5.2","timestamp":"2026-07-05T06:32:23Z"}
+2026-07-05T13:33:31+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:33:31Z"
+}
+2026-07-05T13:33:36+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:33:36Z"
+}
+2026-07-05T13:33:46+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:33:46Z"
+}
+2026-07-05T13:33:51+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:33:51Z"
+}
+2026-07-05T13:33:56+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:33:56Z"
+}
+2026-07-05T13:34:06+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:34:06Z"
+}
+2026-07-05T13:34:33+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:34:34Z"
+}
+2026-07-05T13:34:40+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:34:40Z"
+}
+2026-07-05T13:34:46+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:34:46Z"
+}
+2026-07-05T13:34:51+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:34:51Z"
+}
+2026-07-05T13:34:53+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:34:54Z"
+}
+2026-07-05T13:34:56+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:34:56Z"
+}
+2026-07-05T13:35:00+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:35:00Z"
+}
+2026-07-05T13:35:06+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:35:06Z"
+}
+# mqtt_capture_signal_stop_at=2026-07-05T13:35:10+0700
+2026-07-05T13:35:11+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:35:11Z"
+}
+# mqtt_capture_signal_stop_at=2026-07-05T13:35:12+0700
+2026-07-05T13:35:13+0700 bus/ha/location/state {
+  "source":"home_assistant",
+  "tracker_entity":"person.example_child",
+  "tracker_state":"School",
+  "latitude":0,
+  "longitude":0,
+  "gps_accuracy":0,
+  "timestamp":"2026-07-05T06:35:13Z"
+}
+# manual_collection_stopped_at=2026-07-05T13:35:14+0700

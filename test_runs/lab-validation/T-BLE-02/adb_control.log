@@ -1,0 +1,16 @@
+{"ts": "2026-07-04T12:45:10.477+07:00", "kind": "adb", "action": "START", "returncode": 0, "start_iso": "2026-07-04T12:45:10.322+07:00", "end_iso": "2026-07-04T12:45:10.477+07:00"}
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+
+{"ts": "2026-07-04T12:45:33.802+07:00", "kind": "adb", "action": "STOP", "returncode": 0, "start_iso": "2026-07-04T12:45:33.683+07:00", "end_iso": "2026-07-04T12:45:33.802+07:00"}
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+

@@ -1,0 +1,5 @@
+timestamp,topic,payload
+2026-07-03T23:46:40+0700,bus/event,"{""event"":""bus_clear"",""source"":""chapter4_relay_test"",""timestamp"":""2026-07-03T16:46:40Z""}"
+2026-07-03T23:46:53+0700,bus/event,"{""event"":""sensor_fault"",""sensor"":""SCD4x"",""detail"":""chapter4 simulated fault"",""source"":""chapter4_relay_test"",""timestamp"":""2026-07-03T16:46:50Z""}"
+2026-07-03T23:47:08+0700,bus/distress/state,"{""id"":""ch4-relay-01-emergency"",""severity"":""emergency"",""state"":""active"",""bus_state"":""distress_active"",""trigger"":""presence_detected"",""detail"":""chapter4 simulated emergency"",""timestamp"":""2026-07-03T16:47:00Z"",""evidence"":{""ld2412_target"":true,""ld2412_still"":true,""still_distance"":100,""still_energy"":100,""co2"":996,""co2_baseline"":1006,""co2_delta_since_armed"":-10},""gps"":{""valid"":false,""latitude"":0,""longitude"":0}}"
+2026-07-03T23:47:31+0700,bus/distress/state,

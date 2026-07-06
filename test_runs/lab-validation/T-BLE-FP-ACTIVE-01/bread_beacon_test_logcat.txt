@@ -1,0 +1,53 @@
+--------- beginning of system
+07-04 00:58:19.665 <pid> <pid> I ActivityManager: Force stopping com.example.redacted appid=<id> user=<id>: from process=<id>
+07-04 00:58:19.679 <pid> <pid> W ActivityManager: Invalid packageName: com.example.redacted
+07-04 00:58:19.790 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+--------- beginning of main
+07-04 00:58:19.803 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:58:19.809 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:58:19.818 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:58:19.820 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:58:19.824 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:58:19.924 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:58:20.393 <pid> <pid> W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.example.redacted } U=0: not found
+07-04 00:58:21.947 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:58:21.947 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:58:21.963 <pid> <pid> D BluetoothLeAdvertiser: TxPower == ADVERTISE_TX_POWER_HIGH
+07-04 00:58:21.965 <pid> <pid> I BreadBeaconTest: advertise_start_requested uuid=00000000-0000-4000-8000-000000000000 major=1001 minor=2001
+07-04 00:58:21.991 <pid> <pid> I BreadBeaconTest: advertise_start_success
+07-04 00:58:22.869 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1288 com.example.redacted:848 com.example.redacted:315 android.app.job.IJobCallback$Stub.onTransact:313 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+07-04 00:58:27.177 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:58:27.187 <pid> <pid> I BreadBeaconTest: advertise_stop_requested
+07-04 00:58:27.187 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:58:29.472 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:58:29.817 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:58:29.819 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:58:30.809 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:58:32.997 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:58:33.069 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.app.LoadedApk$ServiceDispatcher$InnerConnection@<object> callingPid=<id> callers: com.example.redacted:1412 com.example.redacted:1288 com.example.redacted:938 com.example.redacted:305 android.app.job.IJobCallback$Stub.onTransact:289 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack> <bottom of call stack> <bottom of call stack> 
+07-04 00:58:33.471 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:58:34.555 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:58:39.981 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:58:39.981 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:58:39.997 <pid> <pid> D BluetoothLeAdvertiser: TxPower == ADVERTISE_TX_POWER_HIGH
+07-04 00:58:40.001 <pid> <pid> I BreadBeaconTest: advertise_start_requested uuid=00000000-0000-4000-8000-000000000000 major=1001 minor=2001
+07-04 00:58:40.019 <pid> <pid> I BreadBeaconTest: advertise_start_success
+07-04 00:58:48.170 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:58:48.180 <pid> <pid> I BreadBeaconTest: advertise_stop_requested
+07-04 00:58:48.180 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:58:53.057 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:59:00.255 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:59:00.257 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:59:00.267 <pid> <pid> D BluetoothLeAdvertiser: TxPower == ADVERTISE_TX_POWER_HIGH
+07-04 00:59:00.270 <pid> <pid> I BreadBeaconTest: advertise_start_requested uuid=00000000-0000-4000-8000-000000000000 major=1001 minor=2001
+07-04 00:59:00.286 <pid> <pid> I BreadBeaconTest: advertise_start_success
+07-04 00:59:00.932 <pid> <pid> W ActivityManager: Unbind failed: could not find connection for android.os.BinderProxy@<object>
+07-04 00:59:00.933 <pid> <pid> W ActivityManager: Unable to start service Intent { act=android.telephony.satellite.SatelliteService xflg=0x4 pkg=com.example.redacted } U=0: not found
+07-04 00:59:04.962 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:59:04.973 <pid> <pid> I BreadBeaconTest: advertise_stop_requested
+07-04 00:59:04.974 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>
+07-04 00:59:19.757 <pid> <pid> I ActivityManager: unbindService com.example.redacted@<object> conn=android.os.BinderProxy@<object> callingPid=<id>
+07-04 00:59:20.518 <pid> <pid> W ActivityManager: Unable to start service Intent { xflg=0x4 cmp=com.example.redacted } U=0: not found
+07-04 00:59:20.540 <pid> <pid> I BreadBeaconTest: command_activity action=io.example.busbeacontest
+07-04 00:59:20.551 <pid> <pid> I ActivityManager: Background started FGS: Allowed [callingPackage: io.example.busbeacontest; callingUid=<id>; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=io.example.busbeacontest xflg=0x4 cmp=io.example.busbeacontest }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion=<version>; callerTargetSdkVersion=<version>; startForegroundCount=<count>; bindFromPackage:null: isBindService:false]
+07-04 00:59:20.552 <pid> <pid> I ActivityManager: Cancel FGS notification userId=<id> definingUid=<id> packageName: io.example.busbeacontest processName:io.example.busbeacontest ChannelId:bread-beacon-test foregroundNotiWhen=<timestamp> Notiflags=<flags>

@@ -1,0 +1,472 @@
+{
+  "scenario": "T-BLE-03",
+  "start": "2026-07-04T12:46:57.064+07:00",
+  "steps": [
+    {
+      "ts": "2026-07-04T12:46:59.574+07:00",
+      "kind": "wait_matched",
+      "label": "pre_active_clear",
+      "topic": "bus/state",
+      "payload": {
+        "state": "active",
+        "ignition_on": true,
+        "armed": false,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "ok",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 0.362548,
+          "remote_uptime_s": 2434,
+          "remote_battery_mv": 0,
+          "seq": 1217,
+          "missed_seq": 485
+        },
+        "timestamp": "2026-07-04T05:45:33Z"
+      }
+    },
+    {
+      "ts": "2026-07-04T12:47:00.078+07:00",
+      "kind": "wait_matched",
+      "label": "crystal_absent_precheck",
+      "topic": "bus/beacon/crystal/state",
+      "payload": {
+        "id": "crystal",
+        "name": "crystal",
+        "state": "absent",
+        "rssi": 0,
+        "timestamp": "2026-07-04T05:43:39Z",
+        "person_name": "Crystal",
+        "rssi_threshold": -75,
+        "active": true,
+        "discord_channel_id": "000000000000000000",
+        "home_zone_entity": "zone.example_home",
+        "last_seen_age_s": 13
+      }
+    },
+    {
+      "ts": "2026-07-04T12:47:00.583+07:00",
+      "kind": "wait_matched",
+      "label": "bread_absent_precheck",
+      "topic": "bus/beacon/bread/state",
+      "payload": {
+        "id": "bread",
+        "name": "bread",
+        "state": "absent",
+        "rssi": 0,
+        "timestamp": "2026-07-04T05:45:45Z",
+        "person_name": "Bread",
+        "rssi_threshold": -75,
+        "active": true,
+        "discord_channel_id": "000000000000000000",
+        "home_zone_entity": "zone.example_home",
+        "last_seen_age_s": 12
+      }
+    },
+    {
+      "ts": "2026-07-04T12:47:03.241+07:00",
+      "kind": "wait_matched",
+      "label": "bread_near_before_arming",
+      "topic": "bus/beacon/bread/state",
+      "payload": {
+        "id": "bread",
+        "name": "bread",
+        "state": "near",
+        "rssi": -59,
+        "timestamp": "2026-07-04T05:47:02Z",
+        "person_name": "Bread",
+        "rssi_threshold": -75,
+        "active": true,
+        "discord_channel_id": "000000000000000000",
+        "home_zone_entity": "zone.example_home",
+        "last_seen_age_s": 0
+      }
+    },
+    {
+      "ts": "2026-07-04T12:47:03.768+07:00",
+      "kind": "wait_matched",
+      "label": "armed_state_seen",
+      "topic": "bus/state",
+      "payload": {
+        "state": "armed",
+        "ignition_on": false,
+        "armed": true,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "ok",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 3.966807,
+          "remote_uptime_s": 2520,
+          "remote_battery_mv": 0,
+          "seq": 1260,
+          "missed_seq": 502
+        },
+        "timestamp": "2026-07-04T05:47:03Z"
+      }
+    },
+    {
+      "ts": "2026-07-04T12:47:04.270+07:00",
+      "kind": "wait_matched",
+      "label": "distress_pending_state_seen",
+      "topic": "bus/state",
+      "payload": {
+        "state": "distress_pending",
+        "ignition_on": false,
+        "armed": true,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "ok",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 3.974909,
+          "remote_uptime_s": 2520,
+          "remote_battery_mv": 0,
+          "seq": 1260,
+          "missed_seq": 502
+        },
+        "timestamp": "2026-07-04T05:47:03Z"
+      }
+    },
+    {
+      "ts": "2026-07-04T12:49:03.603+07:00",
+      "kind": "wait_matched",
+      "label": "distress_active_state_seen",
+      "topic": "bus/state",
+      "payload": {
+        "state": "distress_active",
+        "ignition_on": false,
+        "armed": true,
+        "exit_grace_remaining_s": 0,
+        "distress_active": true,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "ok",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 0.116712,
+          "remote_uptime_s": 2644,
+          "remote_battery_mv": 0,
+          "seq": 1322,
+          "missed_seq": 528
+        },
+        "timestamp": "2026-07-04T05:49:03Z"
+      }
+    },
+    {
+      "ts": "2026-07-04T12:49:04.107+07:00",
+      "kind": "wait_matched",
+      "label": "distress_retained_bread",
+      "topic": "bus/distress/state",
+      "payload": {
+        "id": "distress-20260704-054903",
+        "severity": "emergency",
+        "state": "active",
+        "bus_state": "distress_active",
+        "trigger": "beacon_near",
+        "detail": "bread",
+        "person": {
+          "id": "bread",
+          "person_name": "Bread",
+          "discord_channel_id": "000000000000000000",
+          "home_zone_entity": "zone.example_home"
+        },
+        "timestamp": "2026-07-04T05:49:03Z",
+        "evidence": {
+          "co2": 809,
+          "co2_baseline": 781,
+          "co2_delta_since_armed": 28,
+          "co2_consecutive_rise_count": 0,
+          "ld2412_target": true,
+          "ld2412_moving": false,
+          "ld2412_still": true,
+          "moving_distance": 0,
+          "still_distance": 100,
+          "moving_energy": 0,
+          "still_energy": 100,
+          "ld2412_target_duration_s": 2634.417026,
+          "ld2412_frame_age_s": 0.011008,
+          "beacon_state": "near",
+          "rssi": -63
+        },
+        "gps": {
+          "valid": false,
+          "latitude": 0,
+          "longitude": 0
+        }
+      }
+    },
+    {
+      "ts": "2026-07-04T12:49:04.612+07:00",
+      "kind": "wait_matched",
+      "label": "relay_emergency_bread",
+      "topic": "bus/relay/discord/last_event",
+      "payload": {
+        "channel_id": "000000000000000000",
+        "emergency": true,
+        "content": "@everyone EMERGENCY: possible child left in bus - Bread (`bread`). Trigger: Beacon near.",
+        "embed_titles": [
+          "Emergency: possible child left in bus"
+        ],
+        "timestamp": "2026-07-04T05:49:04Z"
+      }
+    },
+    {
+      "ts": "2026-07-04T12:49:05.351+07:00",
+      "kind": "wait_matched",
+      "label": "restored_active_clear",
+      "topic": "bus/state",
+      "payload": {
+        "state": "active",
+        "ignition_on": true,
+        "armed": false,
+        "exit_grace_remaining_s": 0,
+        "distress_active": false,
+        "distress_acknowledged": false,
+        "gps_valid": false,
+        "co2_status": "ok",
+        "ld2412_status": "ok",
+        "ble_status": "ok",
+        "ignition_source": "espnow",
+        "ignition_source_status": "overridden",
+        "ignition_espnow": {
+          "last_heartbeat_age_s": 0.362548,
+          "remote_uptime_s": 2434,
+          "remote_battery_mv": 0,
+          "seq": 1217,
+          "missed_seq": 485
+        },
+        "timestamp": "2026-07-04T05:45:33Z"
+      }
+    },
+    {
+      "ts": "2026-07-04T12:49:17.941+07:00",
+      "kind": "wait_matched",
+      "label": "distress_retained_clear",
+      "topic": "bus/distress/state",
+      "payload": ""
+    }
+  ],
+  "pre_state": {
+    "state": "active",
+    "ignition_on": true,
+    "armed": false,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 0.362548,
+      "remote_uptime_s": 2434,
+      "remote_battery_mv": 0,
+      "seq": 1217,
+      "missed_seq": 485
+    },
+    "timestamp": "2026-07-04T05:45:33Z"
+  },
+  "crystal_pre": {
+    "id": "crystal",
+    "name": "crystal",
+    "state": "absent",
+    "rssi": 0,
+    "timestamp": "2026-07-04T05:43:39Z",
+    "person_name": "Crystal",
+    "rssi_threshold": -75,
+    "active": true,
+    "discord_channel_id": "000000000000000000",
+    "home_zone_entity": "zone.example_home",
+    "last_seen_age_s": 13
+  },
+  "bread_pre": {
+    "id": "bread",
+    "name": "bread",
+    "state": "absent",
+    "rssi": 0,
+    "timestamp": "2026-07-04T05:45:45Z",
+    "person_name": "Bread",
+    "rssi_threshold": -75,
+    "active": true,
+    "discord_channel_id": "000000000000000000",
+    "home_zone_entity": "zone.example_home",
+    "last_seen_age_s": 12
+  },
+  "beacon_start_iso": "2026-07-04T12:47:00.583+07:00",
+  "bread_near_before_arming_payload": {
+    "id": "bread",
+    "name": "bread",
+    "state": "near",
+    "rssi": -59,
+    "timestamp": "2026-07-04T05:47:02Z",
+    "person_name": "Bread",
+    "rssi_threshold": -75,
+    "active": true,
+    "discord_channel_id": "000000000000000000",
+    "home_zone_entity": "zone.example_home",
+    "last_seen_age_s": 0
+  },
+  "bus_empty_on_iso": "2026-07-04T12:47:03.242+07:00",
+  "armed_payload": {
+    "state": "armed",
+    "ignition_on": false,
+    "armed": true,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 3.966807,
+      "remote_uptime_s": 2520,
+      "remote_battery_mv": 0,
+      "seq": 1260,
+      "missed_seq": 502
+    },
+    "timestamp": "2026-07-04T05:47:03Z"
+  },
+  "pending_payload": {
+    "state": "distress_pending",
+    "ignition_on": false,
+    "armed": true,
+    "exit_grace_remaining_s": 0,
+    "distress_active": false,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 3.974909,
+      "remote_uptime_s": 2520,
+      "remote_battery_mv": 0,
+      "seq": 1260,
+      "missed_seq": 502
+    },
+    "timestamp": "2026-07-04T05:47:03Z"
+  },
+  "active_payload": {
+    "state": "distress_active",
+    "ignition_on": false,
+    "armed": true,
+    "exit_grace_remaining_s": 0,
+    "distress_active": true,
+    "distress_acknowledged": false,
+    "gps_valid": false,
+    "co2_status": "ok",
+    "ld2412_status": "ok",
+    "ble_status": "ok",
+    "ignition_source": "espnow",
+    "ignition_source_status": "overridden",
+    "ignition_espnow": {
+      "last_heartbeat_age_s": 0.116712,
+      "remote_uptime_s": 2644,
+      "remote_battery_mv": 0,
+      "seq": 1322,
+      "missed_seq": 528
+    },
+    "timestamp": "2026-07-04T05:49:03Z"
+  },
+  "distress_payload": {
+    "id": "distress-20260704-054903",
+    "severity": "emergency",
+    "state": "active",
+    "bus_state": "distress_active",
+    "trigger": "beacon_near",
+    "detail": "bread",
+    "person": {
+      "id": "bread",
+      "person_name": "Bread",
+      "discord_channel_id": "000000000000000000",
+      "home_zone_entity": "zone.example_home"
+    },
+    "timestamp": "2026-07-04T05:49:03Z",
+    "evidence": {
+      "co2": 809,
+      "co2_baseline": 781,
+      "co2_delta_since_armed": 28,
+      "co2_consecutive_rise_count": 0,
+      "ld2412_target": true,
+      "ld2412_moving": false,
+      "ld2412_still": true,
+      "moving_distance": 0,
+      "still_distance": 100,
+      "moving_energy": 0,
+      "still_energy": 100,
+      "ld2412_target_duration_s": 2634.417026,
+      "ld2412_frame_age_s": 0.011008,
+      "beacon_state": "near",
+      "rssi": -63
+    },
+    "gps": {
+      "valid": false,
+      "latitude": 0,
+      "longitude": 0
+    }
+  },
+  "relay_emergency": {
+    "channel_id": "000000000000000000",
+    "emergency": true,
+    "content": "@everyone EMERGENCY: possible child left in bus - Bread (`bread`). Trigger: Beacon near.",
+    "embed_titles": [
+      "Emergency: possible child left in bus"
+    ],
+    "timestamp": "2026-07-04T05:49:04Z"
+  },
+  "restore": {
+    "bus_empty_off_iso": "2026-07-04T12:49:04.612+07:00",
+    "restored_active_clear": true,
+    "restored_payload": {
+      "state": "active",
+      "ignition_on": true,
+      "armed": false,
+      "exit_grace_remaining_s": 0,
+      "distress_active": false,
+      "distress_acknowledged": false,
+      "gps_valid": false,
+      "co2_status": "ok",
+      "ld2412_status": "ok",
+      "ble_status": "ok",
+      "ignition_source": "espnow",
+      "ignition_source_status": "overridden",
+      "ignition_espnow": {
+        "last_heartbeat_age_s": 0.362548,
+        "remote_uptime_s": 2434,
+        "remote_battery_mv": 0,
+        "seq": 1217,
+        "missed_seq": 485
+      },
+      "timestamp": "2026-07-04T05:45:33Z"
+    },
+    "distress_retained_clear": true
+  },
+  "end": "2026-07-04T12:49:18.133+07:00",
+  "result": "pass"
+}

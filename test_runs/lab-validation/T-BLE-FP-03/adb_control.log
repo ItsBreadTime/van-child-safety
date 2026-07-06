@@ -1,0 +1,9 @@
+{"at":"2026-07-04T19:18:02.474+07:00","action":"FORCE_STOP_BEACONSCOPE","returncode":0}
+{"at":"2026-07-04T19:18:02.757+07:00","action":"STOP","returncode":0,"start":"2026-07-04T19:18:02.474+07:00","end":"2026-07-04T19:18:02.757+07:00"}
+Starting: Intent { act=io.example.busbeacontest cmp=io.example.busbeacontest }
+Status: ok
+LaunchState: UNKNOWN (0)
+Activity: io.example.busbeacontest
+WaitTime=<id>
+Complete
+
