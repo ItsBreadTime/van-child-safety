@@ -1,4 +1,4 @@
-# Van Child Safety
+# School Van Child Left-Behind Monitoring and Alert System
 
 Prototype ESP32-based van child-safety monitor using BLE beacons, cabin sensors, MQTT/Home Assistant, and operator alerts for child-left-in-vehicle risk.
 
